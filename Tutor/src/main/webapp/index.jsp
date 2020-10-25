@@ -12,7 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello ${c.Username}</h1>
+        <h1>Hello Sir.${us.fname} ${us.lname}</h1>
+        <h2>Your ID : ${us.username}</h2>
+        <h2>Your Password : ${us.password}</h2>
+        <h2>Your email : ${us.email}</h2>
         
     </body>
 </html>

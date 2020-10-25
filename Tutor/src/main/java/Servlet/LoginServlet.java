@@ -8,6 +8,7 @@ package Servlet;
 import Java.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javafx.scene.control.Alert;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

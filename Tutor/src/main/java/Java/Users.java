@@ -139,7 +139,7 @@ public class Users implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.tutor.Users[ username=" + username + " ]";
+        return "Users{" + "username=" + username + ", password=" + password + ", fname=" + fname + ", lname=" + lname + ", email=" + email + '}';
     }
-    
+
 }
