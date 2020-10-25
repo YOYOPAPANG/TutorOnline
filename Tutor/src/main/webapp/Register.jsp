@@ -29,8 +29,8 @@
             <h3>Lastname
                 <input type="text" name="Lname"  /> 
             </h3>
-             <h3>E-mail
-                 <input type="email" name="Email"  /> 
+            <h3>E-mail
+                <input type="email" name="Email"  /> 
             </h3>
             <input type="submit" value="Register" />
         </form>
