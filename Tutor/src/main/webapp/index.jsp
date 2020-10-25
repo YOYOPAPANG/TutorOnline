@@ -9,13 +9,25 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Welcome</title>
     </head>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        a{
+            text-align: center;
+        }
+    </style>
     <body>
         <h1>Hello Sir.${us.fname} ${us.lname}</h1>
         <h2>Your ID : ${us.username}</h2>
         <h2>Your Password : ${us.password}</h2>
         <h2>Your email : ${us.email}</h2>
+        <a href="Logout"/>Logout
         
     </body>
 </html>
