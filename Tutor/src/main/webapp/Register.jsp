@@ -12,17 +12,26 @@
         <title>JSP Page</title>
     </head>
     <body>
-       <h1>Register</h1>
+        <h1>Register</h1>
         <form action="Signup" method="post">
-        <h3>Username
-            <input type="text" name="Username" /> 
-        </h3>
-        <h3>Password
-            <input type="password" name="Password" min="4" max="8" /> 
-        </h3>
-        <h3>Confirm Password
-            <input type="password" name="Password" min="4" max="8" /> 
-        </h3>
+            <h3>Username
+                <input type="text" name="Username" /> 
+            </h3>
+            <h3>Password
+                <input type="password" name="Password" min="4" max="8" /> 
+            </h3>
+            <h3>Confirm Password
+                <input type="password" name="Password" min="4" max="8" /> 
+            </h3>
+            <h3>Firstname
+                <input type="text" name="Fname"  /> 
+            </h3>
+            <h3>Lastname
+                <input type="text" name="Lname"  /> 
+            </h3>
+             <h3>E-mail
+                 <input type="email" name="Email"  /> 
+            </h3>
             <input type="submit" value="Register" />
         </form>
         <br><br>
