@@ -46,6 +46,8 @@ public class LoginServlet extends HttpServlet {
         Query all = em.createNamedQuery("Users.findAll");
         Query usname = em.createNamedQuery("Users.findByUsername");
         Query pass = em.createNamedQuery("Users.findByPassword");
+        
+        
         Users us = em.find(Users.class, user);
 
         if (us.getPassword().equals(password) && us.getUsername().equals(user)) {

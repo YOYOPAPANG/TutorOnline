@@ -62,13 +62,14 @@
                         <li><a href="#">Classroom</a></li>
                         <li><a href="#">Education</a></li>
                         <li><a href="#">Knowledge</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="Logout">${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in" style="right: auto"></span> &nbsp; Logout</a></a></li>
-                    </ul>
-                    
-                   
+                        <li><a href="#">Contact</a></li>     
+                        <li><a href="Logout" >${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in"></span> &nbsp; Logout</a></a></li>                                     
+                            
+                        </ul>
+                    </div>
+                                       
                 </div>
-            </div>
+           
         </nav>
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
