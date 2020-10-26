@@ -24,6 +24,10 @@
                  margin-left: auto;
                  text-align: center;">
                 
+                 <div style='position:absolute;zindex:0;left:0;top:0;width:100%;height:100%'>
+           <img src='Picture/m1.jpg' style='width:100%;height:100%' alt='[]' />
+                   </div>
+                
                 <div class="row  p-md-5 bg_grey_f8" style="display: -webkit-box;
                      display: -ms-flexbox;
                      display: flex;
@@ -43,7 +47,7 @@
                                  flex-direction: column;
                                  min-width: 0;
                                  word-wrap: break-word;
-                                 background-color: #fff;
+                                 background-color: #FFFAFA;
                                  background-clip: border-box;
                                  border: 1px solid rgba(0,0,0,.125);
                                  border-radius: .25rem;">
