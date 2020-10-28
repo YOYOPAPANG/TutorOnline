@@ -51,7 +51,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                     
+
 
                     <a class="navbar-brand" href="#">Tutor Online</a>
 
@@ -59,17 +59,19 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Classroom</a></li>
+                        <li><a href="Classroom.jsp">Classroom</a></li>
                         <li><a href="#">Education</a></li>
                         <li><a href="#">Knowledge</a></li>
-                        <li><a href="#">Contact</a></li>     
-                        <li><a href="Logout" >${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in"></span> &nbsp; Logout</a></a></li>                                     
-                            
+                        <li><a href="#">Contact</a></li>                                         
+                       
+                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="Logout" >${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in"></span> &nbsp; Logout</a></a></li>
                         </ul>
-                    </div>
-                                       
                 </div>
-           
+
+            </div>
+
         </nav>
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -78,6 +80,14 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
             </ol>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -89,26 +99,27 @@
                     </div>      
                 </div>
 
-                <div class="item" >
-                    <img src="Picture/p2.jpg" alt="Image" style="height: 600px; width: 1500px;">
-                      <div class="carousel-caption">
-                    <h3>Online</h3>
-                    <p>Perfect learned</p>
-                </div>
-                </div>      
-            </div>
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+                 <div class="item">
+                      <img src="Picture/p2.jpg" alt="Image" style="height: 600px; width: 1500px;">
+                         <div class="carousel-caption">
+                         <h3>Online</h3>
+                        <p>Perfect learned</p>
+        </div>      
+      </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+    
 
     <div class="container text-center">    
         <h3>What We Do</h3><br>
@@ -135,20 +146,20 @@
     <footer class="container-fluid text-center">
         <p>Footer Text</p>
     </footer>
-   <!-- <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
-        <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://www.youtube.com/watch?v=KqhW31L3GNo&ab_channel=%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B2%E0%B8%A2;);">
-            
-        </div><button class="ytp-large-play-button ytp-button" aria-label="Play">
-            <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
-            <path class="ytp-large-play-button-bg" 
-                  d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,
-                  .13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,
-                  16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.
-                  64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-            <path d="M 45,24 27,14 27,34" fill="#fff"></path>
-            </svg></button>
-    </div>
--->
+    <!-- <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
+         <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://www.youtube.com/watch?v=KqhW31L3GNo&ab_channel=%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B2%E0%B8%A2;);">
+             
+         </div><button class="ytp-large-play-button ytp-button" aria-label="Play">
+             <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+             <path class="ytp-large-play-button-bg" 
+                   d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,
+                   .13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,
+                   16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.
+                   64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+             <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+             </svg></button>
+     </div>
+    -->
 </body>
 </html>
 
