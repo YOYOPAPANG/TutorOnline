@@ -6,16 +6,21 @@
 package Java;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -37,12 +42,12 @@ public class Users implements Serializable {
     @Id
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 25)
+    @Size(min = 1, max = 45)
     @Column(name = "Username")
     private String username;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 25)
+    @Size(min = 1, max = 45)
     @Column(name = "Password")
     private String password;
     @Basic(optional = false)
@@ -61,6 +66,10 @@ public class Users implements Serializable {
     @Size(min = 1, max = 45)
     @Column(name = "Email")
     private String email;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
+    private List<UsersHasDocuments> usersHasDocumentsList;
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "users")
+    private UsersHasVideos usersHasVideos;
 
     public Users() {
     }
@@ -117,6 +126,23 @@ public class Users implements Serializable {
         this.email = email;
     }
 
+    @XmlTransient
+    public List<UsersHasDocuments> getUsersHasDocumentsList() {
+        return usersHasDocumentsList;
+    }
+
+    public void setUsersHasDocumentsList(List<UsersHasDocuments> usersHasDocumentsList) {
+        this.usersHasDocumentsList = usersHasDocumentsList;
+    }
+
+    public UsersHasVideos getUsersHasVideos() {
+        return usersHasVideos;
+    }
+
+    public void setUsersHasVideos(UsersHasVideos usersHasVideos) {
+        this.usersHasVideos = usersHasVideos;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -139,7 +165,7 @@ public class Users implements Serializable {
 
     @Override
     public String toString() {
-        return "Users{" + "username=" + username + ", password=" + password + ", fname=" + fname + ", lname=" + lname + ", email=" + email + '}';
+        return "Java.Users[ username=" + username + " ]";
     }
-
+    
 }
