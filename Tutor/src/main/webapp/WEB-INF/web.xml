@@ -20,10 +20,6 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>Servlet.RegisterServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>Register2Servlet</servlet-name>
-        <servlet-class>Servlet.Register2Servlet</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>

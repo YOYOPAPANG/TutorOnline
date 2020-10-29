@@ -16,7 +16,7 @@ public class DBConnection {
 
     public static Connection createConnection() {
         Connection con = null;
-        String url = "jdbc:mysql://localhost:3306/tutoronlineprojectsus?zeroDateTimeBehavior=CONVERT_TO_NULL"; //MySQL URL followed by the database name
+        String url = "jdbc:mysql://localhost:3306/tutoronlineprojectsus?useSSL=false"; //MySQL URL followed by the database name
         String username = "root"; //MySQL username
         String password = "1234"; //MySQL password
         System.out.println("In DBConnection.java class ");

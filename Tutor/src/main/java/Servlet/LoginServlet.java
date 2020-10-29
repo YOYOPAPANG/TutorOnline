@@ -5,6 +5,7 @@
  */
 package Servlet;
 
+
 import Database.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +13,7 @@ import javafx.scene.control.Alert;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceUnit;
 import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,6 +27,7 @@ import javax.servlet.http.HttpSession;
  */
 public class LoginServlet extends HttpServlet {
 
+ @PersistenceUnit(unitName = "TestPU")
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
