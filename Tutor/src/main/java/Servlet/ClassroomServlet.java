@@ -5,8 +5,8 @@
  */
 package Servlet;
 
-import Java.Users;
-import Java.Videos;
+import Database.Users;
+import Database.Videos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManager;

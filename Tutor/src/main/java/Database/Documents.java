@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Java;
+package Database;
 
 import java.io.Serializable;
 import java.util.List;
@@ -29,69 +29,60 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author ASUS
  */
 @Entity
-@Table(name = "videos")
+@Table(name = "documents")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Videos.findAll", query = "SELECT v FROM Videos v"),
-    @NamedQuery(name = "Videos.findByVideoName", query = "SELECT v FROM Videos v WHERE v.videoName = :videoName"),
-    @NamedQuery(name = "Videos.findByVideoURL", query = "SELECT v FROM Videos v WHERE v.videoURL = :videoURL")})
-public class Videos implements Serializable {
+    @NamedQuery(name = "Documents.findAll", query = "SELECT d FROM Documents d"),
+    @NamedQuery(name = "Documents.findByDocumentName", query = "SELECT d FROM Documents d WHERE d.documentName = :documentName"),
+    @NamedQuery(name = "Documents.findByDocumentURL", query = "SELECT d FROM Documents d WHERE d.documentURL = :documentURL")})
+public class Documents implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
-    @Column(name = "VideoName")
-    private String videoName;
+    @Column(name = "DocumentName")
+    private String documentName;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 250)
-    @Column(name = "VideoURL")
-    private String videoURL;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "videos")
-    private List<UsersHasVideos> usersHasVideosList;
+    @Column(name = "DocumentURL")
+    private String documentURL;
     @JoinColumns({
         @JoinColumn(name = "Subjects_SubjectName", referencedColumnName = "SubjectName"),
         @JoinColumn(name = "Subjects_SubjectName", referencedColumnName = "SubjectName")})
     @ManyToOne(optional = false)
     private Subjects subjects;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "documents")
+    private List<UsersHasDocuments> usersHasDocumentsList;
 
-    public Videos() {
+    public Documents() {
     }
 
-    public Videos(String videoName) {
-        this.videoName = videoName;
+    public Documents(String documentName) {
+        this.documentName = documentName;
     }
 
-    public Videos(String videoName, String videoURL) {
-        this.videoName = videoName;
-        this.videoURL = videoURL;
+    public Documents(String documentName, String documentURL) {
+        this.documentName = documentName;
+        this.documentURL = documentURL;
     }
 
-    public String getVideoName() {
-        return videoName;
+    public String getDocumentName() {
+        return documentName;
     }
 
-    public void setVideoName(String videoName) {
-        this.videoName = videoName;
+    public void setDocumentName(String documentName) {
+        this.documentName = documentName;
     }
 
-    public String getVideoURL() {
-        return videoURL;
+    public String getDocumentURL() {
+        return documentURL;
     }
 
-    public void setVideoURL(String videoURL) {
-        this.videoURL = videoURL;
-    }
-
-    @XmlTransient
-    public List<UsersHasVideos> getUsersHasVideosList() {
-        return usersHasVideosList;
-    }
-
-    public void setUsersHasVideosList(List<UsersHasVideos> usersHasVideosList) {
-        this.usersHasVideosList = usersHasVideosList;
+    public void setDocumentURL(String documentURL) {
+        this.documentURL = documentURL;
     }
 
     public Subjects getSubjects() {
@@ -102,21 +93,30 @@ public class Videos implements Serializable {
         this.subjects = subjects;
     }
 
+    @XmlTransient
+    public List<UsersHasDocuments> getUsersHasDocumentsList() {
+        return usersHasDocumentsList;
+    }
+
+    public void setUsersHasDocumentsList(List<UsersHasDocuments> usersHasDocumentsList) {
+        this.usersHasDocumentsList = usersHasDocumentsList;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (videoName != null ? videoName.hashCode() : 0);
+        hash += (documentName != null ? documentName.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Videos)) {
+        if (!(object instanceof Documents)) {
             return false;
         }
-        Videos other = (Videos) object;
-        if ((this.videoName == null && other.videoName != null) || (this.videoName != null && !this.videoName.equals(other.videoName))) {
+        Documents other = (Documents) object;
+        if ((this.documentName == null && other.documentName != null) || (this.documentName != null && !this.documentName.equals(other.documentName))) {
             return false;
         }
         return true;
@@ -124,7 +124,7 @@ public class Videos implements Serializable {
 
     @Override
     public String toString() {
-        return "Java.Videos[ videoName=" + videoName + " ]";
+        return "Java.Documents[ documentName=" + documentName + " ]";
     }
     
 }

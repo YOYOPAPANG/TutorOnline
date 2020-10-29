@@ -5,6 +5,8 @@
  */
 package Servlet;
 
+import Database.Users;
+import Java.RegisterDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -30,17 +32,19 @@ public class RegisterServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //Copying all the input parameters in to local variables
-        String fullName = request.getParameter("fullname");
-        String email = request.getParameter("email");
-        String userName = request.getParameter("username");
-        String password = request.getParameter("password");
+        String userName = request.getParameter("Username");
+        String password = request.getParameter("Password");
+        String firstName = request.getParameter("Fname");
+        String LastName = request.getParameter("Lname");
+        String email = request.getParameter("Email");
 
-        RegisterBean registerBean = new RegisterBean();
+        Users registerBean = new Users();
         //Using Java Beans - An easiest way to play with group of related data
-        registerBean.setFullName(fullName);
-        registerBean.setEmail(email);
-        registerBean.setUserName(userName);
+        registerBean.setUsername(userName);
         registerBean.setPassword(password);
+        registerBean.setFname(firstName);
+        registerBean.setLname(LastName);
+        registerBean.setEmail(email);
 
         RegisterDao registerDao = new RegisterDao();
 
@@ -49,14 +53,15 @@ public class RegisterServlet extends HttpServlet {
 
         if (userRegistered.equals("SUCCESS")) //On success, you can display a message to user on Home page
         {
-            request.getRequestDispatcher("/Home.jsp").forward(request, response);
+            request.getRequestDispatcher("Home.jsp").forward(request, response);
         } else //On Failure, display a meaningful message to the User.
         {
             request.setAttribute("errMessage", userRegistered);
-            request.getRequestDispatcher("/Register.jsp").forward(request, response);
+            request.getRequestDispatcher("Register2.jsp").forward(request, response);
         }
     }
-}
+
+
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
 /**

@@ -20,6 +20,10 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>Servlet.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Register2Servlet</servlet-name>
+        <servlet-class>Servlet.Register2Servlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Register2Servlet</servlet-name>
+        <url-pattern>/Register2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

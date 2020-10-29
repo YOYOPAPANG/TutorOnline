@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Java.Users;
+import Database.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javafx.scene.control.Alert;
