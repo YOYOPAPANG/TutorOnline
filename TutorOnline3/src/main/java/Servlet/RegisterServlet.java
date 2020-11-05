@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Database.Users;
+import database.Users;
 import Java.RegisterDao;
 import java.io.IOException;
 import java.io.PrintWriter;

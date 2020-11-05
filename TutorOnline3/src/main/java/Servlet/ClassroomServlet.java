@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Database.Videos;
+import database.Videos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManager;

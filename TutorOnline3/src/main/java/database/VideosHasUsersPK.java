@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Database;
+package database;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -17,32 +17,24 @@ import javax.validation.constraints.Size;
  * @author ASUS
  */
 @Embeddable
-public class UsersHasVideosPK implements Serializable {
+public class VideosHasUsersPK implements Serializable {
 
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
-    @Column(name = "Users_Username")
-    private String usersUsername;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 45)
     @Column(name = "Videos_VideoName")
     private String videosVideoName;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "Users_Username")
+    private String usersUsername;
 
-    public UsersHasVideosPK() {
+    public VideosHasUsersPK() {
     }
 
-    public UsersHasVideosPK(String usersUsername, String videosVideoName) {
-        this.usersUsername = usersUsername;
+    public VideosHasUsersPK(String videosVideoName, String usersUsername) {
         this.videosVideoName = videosVideoName;
-    }
-
-    public String getUsersUsername() {
-        return usersUsername;
-    }
-
-    public void setUsersUsername(String usersUsername) {
         this.usersUsername = usersUsername;
     }
 
@@ -54,25 +46,33 @@ public class UsersHasVideosPK implements Serializable {
         this.videosVideoName = videosVideoName;
     }
 
+    public String getUsersUsername() {
+        return usersUsername;
+    }
+
+    public void setUsersUsername(String usersUsername) {
+        this.usersUsername = usersUsername;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (usersUsername != null ? usersUsername.hashCode() : 0);
         hash += (videosVideoName != null ? videosVideoName.hashCode() : 0);
+        hash += (usersUsername != null ? usersUsername.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof UsersHasVideosPK)) {
+        if (!(object instanceof VideosHasUsersPK)) {
             return false;
         }
-        UsersHasVideosPK other = (UsersHasVideosPK) object;
-        if ((this.usersUsername == null && other.usersUsername != null) || (this.usersUsername != null && !this.usersUsername.equals(other.usersUsername))) {
-            return false;
-        }
+        VideosHasUsersPK other = (VideosHasUsersPK) object;
         if ((this.videosVideoName == null && other.videosVideoName != null) || (this.videosVideoName != null && !this.videosVideoName.equals(other.videosVideoName))) {
+            return false;
+        }
+        if ((this.usersUsername == null && other.usersUsername != null) || (this.usersUsername != null && !this.usersUsername.equals(other.usersUsername))) {
             return false;
         }
         return true;
@@ -80,7 +80,7 @@ public class UsersHasVideosPK implements Serializable {
 
     @Override
     public String toString() {
-        return "Database.UsersHasVideosPK[ usersUsername=" + usersUsername + ", videosVideoName=" + videosVideoName + " ]";
+        return "database.VideosHasUsersPK[ videosVideoName=" + videosVideoName + ", usersUsername=" + usersUsername + " ]";
     }
     
 }

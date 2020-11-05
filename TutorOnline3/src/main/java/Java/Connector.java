@@ -18,7 +18,7 @@ import javax.jms.ConnectionFactory;
  */
 public class Connector {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/tutoronlineprojectsus?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String URL = "jdbc:mysql://localhost:3306/janjan333?useSSL=false";
     private static final String USER = "root";
     private static final String PASSWORD = "1234";
 

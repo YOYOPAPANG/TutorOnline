@@ -12,37 +12,6 @@
         <title>Register</title>
         <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
         <link href="bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <script>
-            function validate()
-            {
-                var username = document.form.username.value;
-                var password = document.form.password.value;
-                var conpassword = document.form.conpassword.value;
-                var firstname = document.form.firstname.value;
-                var lastname = document.form.lastname.value;
-                var email = document.form.email.value;
-
-                if (username === null || username === "") {
-                    alert("Username can't be blank");
-                    return false;
-                } else if (password.length < 6) {
-                    alert("Password must be at least 6 characters long.");
-                    return false;
-                } else if (password !== conpassword) {
-                    alert("Confirm Password should match with the Password");
-                    return false;
-                } else if (firstname === null || firstname === "") {
-                    alert("Firstname can't be blank");
-                    return false;
-                } else if (lastname === null || lastname === "") {
-                    alert("Lastname can't be blank");
-                    return false;
-                } else if (email === null || email === "") {
-                    alert("Email can't be blank");
-                    return false;
-                }
-            }
-        </script> 
     </head>
     <body>
 
@@ -87,37 +56,71 @@
                                 <div class="mb-0 txt_headwelcome" style="    font-size: 40px;
                                      color: #333;">Register</div>
                             </div>
+                            <script>
+                                function myFunction() {
+                                    var Username = document.getElementById("Username").value;
+                                    if (Username === null || Username === "") {
+                                        alert("กรุณากรอก Username");
+                                        return false;
+                                    }
+                                    var Password = document.getElementById("Password").value;
+                                    var Conpassword = document.getElementById("Conpassword").value;
+                                    if (Password !== Conpassword) {
+                                        alert("รหัสผ่านไม่ตรงกัน");
+                                        return false;
+                                    } else {
+                                        alert("รหัสผ่านตรงกัน ");
+                                        return true;
+                                    }
+                                    var Firstname = document.getElementById("Firstname").value;
+                                    if (Firstname === null || Firstname === "") {
+                                        alert("กรุณากรอก Firstname");
+                                        return false;
+                                    }
+                                    var Lastname = document.getElementById("Lastname").value;
+                                    if (Lastname === null || Lastname === "") {
+                                        alert("กรุณากรอก Lastname");
+                                        return false;
+                                    }
+                                    var Email = document.getElementById("Email").value;
+                                    if (Email === null || Email === "") {
+                                        alert("กรุณากรอก Email");
+                                        return false;
+                                    }
 
-                            <form  action="Register" method="POST" onsubmit="return validate()">
+                                }
+                            </script>
+
+                            <form  action="Register" method="POST" onsubmit="return myFunction()">
 
                                 <div class="row pb-md-5" style="">
                                     <div class="col-12  border-right-md-1 pt-3 pb-2 pr-md-3">
                                         <div class="form-group form-group-feedback form-group-feedback-right" >
-                                            <input type="text" name="Username" id="Username" class="form-control border-gray border" placeholder="Username" value="" required="">
+                                            <input type="text" name="Username" id="Username" class="form-control border-gray border" placeholder="Username" value="" required=""  >
                                         </div>
 
                                         <div class="form-group form-group-feedback form-group-feedback-">
-                                            <input type="password" name="Password"  class="form-control border-gray border" placeholder="Password" value="" required="" >
+                                            <input type="password" name="Password" id="Password" class="form-control border-gray border" placeholder="Password" value="" required="">
                                         </div>
 
                                         <div class="form-group form-group-feedback form-group-feedback-">
-                                            <input type="password" name="Password" class="form-control border-gray border" placeholder="Confirm Password" value="" required="">
+                                            <input type="password" name="Confirm Password" id="Conpassword" class="form-control border-gray border" placeholder="Confirm Password" value="" required="">
                                         </div>
 
                                         <div class="form-group form-group-feedback form-group-feedback-right" >
-                                            <input type="text" name="Fname" id="Username" class="form-control border-gray border" placeholder="Firstname" value="" required="">
+                                            <input type="text" name="Fname" id="Firstname" class="form-control border-gray border" placeholder="Firstname" value="" required="" >
                                         </div>
 
                                         <div class="form-group form-group-feedback form-group-feedback-right" >
-                                            <input type="text" name="Lname" id="Username" class="form-control border-gray border" placeholder="Lastname" value=""required="" >
+                                            <input type="text" name="Lname" id="Lastname" class="form-control border-gray border" placeholder="Lastname" value="" required="" >
                                         </div>
 
                                         <div class="form-group form-group-feedback form-group-feedback-right" >
-                                            <input type="email" name="Email" id="Username" class="form-control border-gray border" placeholder="E-mail" value="" required="" >
+                                            <input type="email" name="Email" id="Email" class="form-control border-gray border" placeholder="E-mail" value="" required=""  >
                                         </div>
                                         <div class="form-group form-group-feedback form-group-feedback-right" >
                                             <tr>
-                                                    <td><%=(request.getAttribute("errMessage") == null) ? ""
+                                                <td><%=(request.getAttribute("errMessage") == null) ? ""
                                                             : request.getAttribute("errMessage")%></td>
                                             </tr>
                                         </div>

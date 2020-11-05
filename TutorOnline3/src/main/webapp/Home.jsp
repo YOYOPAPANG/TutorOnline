@@ -160,11 +160,11 @@
         <h3>What We Do</h3><br>
         <div class="row">
             <div class="col-sm-4">
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <img src="https://youtu.be/8f5ZnLWY96k?list=PLcLc3KmtwXNTP3cJo4FWBsv-n4_yZIPmL" class="img-responsive" style="width:100%" alt="Image">
                 <p>Current Project</p>
             </div>
             <div class="col-sm-4"> 
-                <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                <img src="https://youtu.be/SnAT3swFJBw?list=PLcLc3KmtwXNTP3cJo4FWBsv-n4_yZIPmL" class="img-responsive" style="width:100%" alt="Image">
                 <p>Project 2</p>    
             </div>
             <div class="col-sm-4">

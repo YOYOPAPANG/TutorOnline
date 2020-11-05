@@ -5,7 +5,7 @@
  */
 package Java;
 
-import Database.Users;
+import database.Users;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
