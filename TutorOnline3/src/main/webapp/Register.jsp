@@ -69,7 +69,7 @@
                                         alert("รหัสผ่านไม่ตรงกัน");
                                         return false;
                                     } else {
-                                        alert("รหัสผ่านตรงกัน ");
+                                        alert("สมัครสำเร็จ ");
                                         return true;
                                     }
                                     var Firstname = document.getElementById("Firstname").value;
