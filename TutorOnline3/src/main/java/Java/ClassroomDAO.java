@@ -44,6 +44,7 @@ public class ClassroomDAO {
                 videos.setVideoName(rs.getString("VideoName"));
                 videos.setVideoURL(rs.getString("VideoURL"));
                 subs.setSubjectName(rs.getString("Subjects_SubjectName"));
+                videos.setSubjectsSubjectName(subs);
                 video.add(videos);
             }
         } catch (Exception ex) {

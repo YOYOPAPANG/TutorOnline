@@ -113,7 +113,7 @@ public class Subjects implements Serializable {
 
     @Override
     public String toString() {
-        return "database.Subjects[ subjectName=" + subjectName + " ]";
+        return subjectName ;
     }
     
 }

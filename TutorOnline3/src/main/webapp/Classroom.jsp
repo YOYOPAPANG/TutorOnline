@@ -24,15 +24,14 @@
     </head>
     <body>
         hello<br>
-            <c:forEach items="${videos}" var="vd">
-            <td>${vd.videoName}</td><br>
-            <video width="320" height="240" controls autoplay loop>
+        <c:forEach items="${videos}" var="vd">
+        <td>${vd.videoName}</td><br>
+        <video width="320" height="240" controls autoplay loop>
             <source src="${vd.videoURL}">
-         </video><br>
-          
-                    <td>${vd.subjectsSubjectName}</td>
-            </c:forEach>
+        </video><br>
+        ${vd.subjectsSubjectName}<br>
+    </c:forEach>
 
-    </body>
+</body>
 </html>
 
