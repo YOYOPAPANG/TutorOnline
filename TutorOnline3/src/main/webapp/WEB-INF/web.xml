@@ -20,6 +20,14 @@
         <servlet-name>TestDatabaseServlet</servlet-name>
         <servlet-class>Servlet.TestDatabaseServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VideoServlet</servlet-name>
+        <servlet-class>Servlet.VideoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Video2Servlet</servlet-name>
+        <servlet-class>Servlet.Video2Servlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClassroomServlet</servlet-name>
         <url-pattern>/Classroom</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>TestDatabaseServlet</servlet-name>
         <url-pattern>/TestDatabase</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VideoServlet</servlet-name>
+        <url-pattern>/VideoServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Video2Servlet</servlet-name>
+        <url-pattern>/Video</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

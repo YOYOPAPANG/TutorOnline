@@ -59,7 +59,7 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="Classroom.jsp">Classroom</a></li>
+                        <li><a href="Classroom">Classroom</a></li>
                         <li><a href="#">Education</a></li>
                         <li><a href="#">Knowledge</a></li>
                         <li><a href="#">Contact</a></li>                                         
