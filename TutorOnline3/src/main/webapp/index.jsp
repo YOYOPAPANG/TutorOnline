@@ -42,6 +42,12 @@
         </style>
     </head>
     <body>
+        <div id="templatemo_search">
+            <form action="Serch" method="get">
+                <input type="text" value="" name="search" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field">
+                <input type="submit" name="search" value=" " alt="search" id="search" title="search" class="sub_btn">
+            </form>
+        </div>
 
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -60,8 +66,8 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="Classroom">Classroom</a></li>
-                        <li><a href="#">Education</a></li>
-                        <li><a href="#">Knowledge</a></li>
+                        <li><a href="Subjects">Subject</a></li>
+                        <li><a href="Education">Education</a></li>
                         <li><a href="#">Contact</a></li>                                         
 
                     </ul>

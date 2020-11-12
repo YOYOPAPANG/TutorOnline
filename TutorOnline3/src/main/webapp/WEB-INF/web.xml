@@ -28,6 +28,18 @@
         <servlet-name>Video2Servlet</servlet-name>
         <servlet-class>Servlet.Video2Servlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SerchServlet</servlet-name>
+        <servlet-class>Servlet.SerchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SubjectsServlet</servlet-name>
+        <servlet-class>Servlet.SubjectsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EducationServlet</servlet-name>
+        <servlet-class>Servlet.EducationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClassroomServlet</servlet-name>
         <url-pattern>/Classroom</url-pattern>
@@ -55,6 +67,18 @@
     <servlet-mapping>
         <servlet-name>Video2Servlet</servlet-name>
         <url-pattern>/Video</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SerchServlet</servlet-name>
+        <url-pattern>/Serch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubjectsServlet</servlet-name>
+        <url-pattern>/Subjects</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EducationServlet</servlet-name>
+        <url-pattern>/Education</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

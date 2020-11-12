@@ -118,12 +118,7 @@
                                         <div class="form-group form-group-feedback form-group-feedback-right" >
                                             <input type="email" name="Email" id="Email" class="form-control border-gray border" placeholder="E-mail" value="" required=""  >
                                         </div>
-                                        <div class="form-group form-group-feedback form-group-feedback-right" >
-                                            <tr>
-                                                <td><%=(request.getAttribute("errMessage") == null) ? ""
-                                                            : request.getAttribute("errMessage")%></td>
-                                            </tr>
-                                        </div>
+                                       
                                         <div class="mx-auto">
 
                                             <button type="submit" class="btn btn_grey_login py-1 btn-block" name ="Register" style="border-radius: 5rem;
