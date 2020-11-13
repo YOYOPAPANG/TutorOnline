@@ -2,23 +2,23 @@
 <web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
     <servlet>
         <servlet-name>ClassroomServlet</servlet-name>
-        <servlet-class>Servlet.ClassroomServlet</servlet-class>
+        <servlet-class>servlett.ClassroomServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>Servlet.LoginServlet</servlet-class>
+        <servlet-class>servlett.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>Servlet.LogoutServlet</servlet-class>
+        <servlet-class>servlett.LogoutServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>Servlet.RegisterServlet</servlet-class>
+        <servlet-class>servlett.RegisterServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>TestDatabaseServlet</servlet-name>
-        <servlet-class>Servlet.TestDatabaseServlet</servlet-class>
+        <servlet-class>servlett.TestDatabaseServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VideoServlet</servlet-name>
@@ -34,11 +34,23 @@
     </servlet>
     <servlet>
         <servlet-name>SubjectsServlet</servlet-name>
-        <servlet-class>Servlet.SubjectsServlet</servlet-class>
+        <servlet-class>servlett.SubjectsServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>EducationServlet</servlet-name>
-        <servlet-class>Servlet.EducationServlet</servlet-class>
+        <servlet-class>servlett.EducationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ContactServlet</servlet-name>
+        <servlet-class>servlett.ContactServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchSubjectsServlet</servlet-name>
+        <servlet-class>servlett.SearchSubjectsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Classroom2Servlet</servlet-name>
+        <servlet-class>servlett.Classroom2Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ClassroomServlet</servlet-name>
@@ -79,6 +91,18 @@
     <servlet-mapping>
         <servlet-name>EducationServlet</servlet-name>
         <url-pattern>/Education</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContactServlet</servlet-name>
+        <url-pattern>/Contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchSubjectsServlet</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Classroom2Servlet</servlet-name>
+        <url-pattern>/Classroom2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

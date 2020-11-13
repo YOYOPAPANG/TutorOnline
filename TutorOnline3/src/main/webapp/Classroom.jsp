@@ -10,7 +10,6 @@
 <%@page import="java.util.logging.Level"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.DriverManager"%>
-<%@page import="Java.DBConnection"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -43,10 +42,12 @@
                     <div class="product_box" >
                         <b> ${vd.videoName}</b>
                         <p>${vd.subjectsSubjectName}</p>
-
+                        
+                        <img src="http://img.youtube.com/vi/<youtube-video-id>/default.jpg"
                         <iframe width="560" height="315" src="${vd.videoURL}" 
                                 frameborder="0"  allowfullscreen>
                         </iframe><br>
+                        
                          
                     </div>        	
 

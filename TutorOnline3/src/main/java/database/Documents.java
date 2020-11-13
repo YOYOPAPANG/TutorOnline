@@ -8,15 +8,15 @@ package database;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -48,11 +48,14 @@ public class Documents implements Serializable {
     @Size(min = 1, max = 250)
     @Column(name = "DocumentURL")
     private String documentURL;
+    @JoinTable(name = "users_has_documents", joinColumns = {
+        @JoinColumn(name = "Documents_DocumentName", referencedColumnName = "DocumentName")}, inverseJoinColumns = {
+        @JoinColumn(name = "Users_Username", referencedColumnName = "Username")})
+    @ManyToMany
+    private List<Users> usersList;
     @JoinColumn(name = "Subjects_SubjectName", referencedColumnName = "SubjectName")
     @ManyToOne(optional = false)
     private Subjects subjectsSubjectName;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "documents")
-    private List<UsersHasDocuments> usersHasDocumentsList;
 
     public Documents() {
     }
@@ -82,21 +85,21 @@ public class Documents implements Serializable {
         this.documentURL = documentURL;
     }
 
+    @XmlTransient
+    public List<Users> getUsersList() {
+        return usersList;
+    }
+
+    public void setUsersList(List<Users> usersList) {
+        this.usersList = usersList;
+    }
+
     public Subjects getSubjectsSubjectName() {
         return subjectsSubjectName;
     }
 
     public void setSubjectsSubjectName(Subjects subjectsSubjectName) {
         this.subjectsSubjectName = subjectsSubjectName;
-    }
-
-    @XmlTransient
-    public List<UsersHasDocuments> getUsersHasDocumentsList() {
-        return usersHasDocumentsList;
-    }
-
-    public void setUsersHasDocumentsList(List<UsersHasDocuments> usersHasDocumentsList) {
-        this.usersHasDocumentsList = usersHasDocumentsList;
     }
 
     @Override

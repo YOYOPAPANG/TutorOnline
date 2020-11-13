@@ -40,11 +40,6 @@ public class Histories implements Serializable {
     @Column(name = "HistoryName")
     private String historyName;
     @JoinColumns({
-        @JoinColumn(name = "Users_has_Documents_Users_Username", referencedColumnName = "Users_Username"),
-        @JoinColumn(name = "Users_has_Documents_Documents_DocumentName", referencedColumnName = "Documents_DocumentName")})
-    @ManyToOne(optional = false)
-    private UsersHasDocuments usersHasDocuments;
-    @JoinColumns({
         @JoinColumn(name = "Videos_has_Users_Videos_VideoName", referencedColumnName = "Videos_VideoName"),
         @JoinColumn(name = "Videos_has_Users_Users_Username", referencedColumnName = "Users_Username")})
     @ManyToOne(optional = false)
@@ -63,14 +58,6 @@ public class Histories implements Serializable {
 
     public void setHistoryName(String historyName) {
         this.historyName = historyName;
-    }
-
-    public UsersHasDocuments getUsersHasDocuments() {
-        return usersHasDocuments;
-    }
-
-    public void setUsersHasDocuments(UsersHasDocuments usersHasDocuments) {
-        this.usersHasDocuments = usersHasDocuments;
     }
 
     public VideosHasUsers getVideosHasUsers() {

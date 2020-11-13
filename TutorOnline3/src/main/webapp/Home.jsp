@@ -61,13 +61,14 @@
                      margin-top: 15px;
                      float: right;
                      margin-right: 20px;">
-                    <div class="icon-img-user"><img src="Picture/icon-login.png" style="
-                                                    width: 30px;
-                                                    height: 30px;
-                                                    border-radius: 100%;
-                                                    background-color: white;
-                                                    overflow: hidden;
-                                                    float: left;"> 
+                    <div class="icon-img-user">
+                        <!--                    <img src="Picture/icon-login.png" style="
+                                                                            width: 30px;
+                                                                            height: 30px;
+                                                                            border-radius: 100%;
+                                                                            background-color: white;
+                                                                            overflow: hidden;
+                                                                            float: left;"> -->
                     </div>
 
                     <a class="btn-login" href="Login.jsp" style="    
@@ -109,7 +110,21 @@
                         <li><a href="Login.jsp">Subject</a></li>
                         <li><a href="Login.jsp">Education</a></li>
                         <li><a href="Login.jsp">Contact</a></li>     
-
+                        <li class="nav navbar-nav navbar-right">
+                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
+                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                            <!--                            <form class="navbar-form" action="Search" method="GET">
+                                                            <div class="form-group" style="display:inline;">
+                                                                <div class="input-group" style="display:table;">
+                                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                                                    <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+                                                                    <button type="submit">Search</button>
+                                                                </div>
+                                                            </div>
+                                                        </form>-->
+                        </li>
                     </ul>
                 </div>
 
@@ -158,28 +173,31 @@
 
     <div class="container text-center">    
         <h3>What We Do</h3><br>
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="https://youtu.be/8f5ZnLWY96k?list=PLcLc3KmtwXNTP3cJo4FWBsv-n4_yZIPmL" class="img-responsive" style="width:100%" alt="Image">
-                <p>Current Project</p>
-            </div>
-            <div class="col-sm-4"> 
-                <img src="https://youtu.be/SnAT3swFJBw?list=PLcLc3KmtwXNTP3cJo4FWBsv-n4_yZIPmL" class="img-responsive" style="width:100%" alt="Image">
-                <p>Project 2</p>    
-            </div>
-            <div class="col-sm-4">
-                <div class="well">
-                    <p>Some text..</p>
-                </div>
-                <div class="well">
-                    <p>Some text..</p>
-                </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <video width="320" height="240" controls  muted autoplay />
+                <source src="Video/1.mp4" alt="video" >
             </div>
         </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <video width="320" height="240" controls muted autoplay/>
+                <source src="Video/2.mp4" alt="video" >
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <video width="320" height="240" controls muted autoplay />
+                <source src="Video/4.mp4" alt="video" >
+            </div>
+        </div>
+
     </div><br>
 
     <footer class="container-fluid text-center">
-        <p>Footer Text</p>
+        <p>Online Perfect Learned!!</p>
+        <a target="_blank" href="Contact.jsp" title="ติดต่อเรา"> <h5 class="mt-10">ติดต่อเรา</h5></a>
+        <a id="gotop" href="#" title="Go Top" class="gotop" style="display: inline;"><i class="fa fa-chevron-up"></i><span>กลับด้านบน</span></a>
     </footer>
     <!-- <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
          <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://www.youtube.com/watch?v=KqhW31L3GNo&ab_channel=%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B2%E0%B8%A2;);">

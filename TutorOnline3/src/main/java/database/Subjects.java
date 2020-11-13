@@ -113,7 +113,7 @@ public class Subjects implements Serializable {
 
     @Override
     public String toString() {
-        return subjectName ;
+        return subjectName;
     }
     
 }
