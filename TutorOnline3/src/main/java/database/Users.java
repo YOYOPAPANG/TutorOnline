@@ -68,7 +68,7 @@ public class Users implements Serializable {
     private String email;
     @ManyToMany(mappedBy = "usersList")
     private List<Documents> documentsList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "users")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "usersUsername")
     private List<VideosHasUsers> videosHasUsersList;
 
     public Users() {
@@ -166,7 +166,7 @@ public class Users implements Serializable {
 
     @Override
     public String toString() {
-        return "database.Users[ username=" + username + " ]";
+        return username;
     }
     
 }

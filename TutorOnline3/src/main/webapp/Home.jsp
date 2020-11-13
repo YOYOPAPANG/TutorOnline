@@ -105,7 +105,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="Home.">Home</a></li>
                         <li><a href="Login.jsp">Classroom</a></li>
                         <li><a href="Login.jsp">Subject</a></li>
                         <li><a href="Login.jsp">Education</a></li>
@@ -126,6 +126,7 @@
                                                         </form>-->
                         </li>
                     </ul>
+                    
                 </div>
 
             </div>
@@ -150,7 +151,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="Picture/p1.jpg" alt="Image" style="height: 600px; width: 1500px;">
+                    <img src="Picture/p1.jpg" alt="Image" style="height: 400px; width: 1500px;">
                     <div class="carousel-caption">
                         <h3>Online</h3>
                         <p>Perfect learned</p>
@@ -158,7 +159,7 @@
                 </div>
 
                 <div class="item" >
-                    <img src="Picture/p2.jpg" alt="Image" style="height: 600px; width: 1500px;">
+                    <img src="Picture/p2.jpg" alt="Image" style="height: 400px; width: 1500px;">
                     <div class="carousel-caption">
                         <h3>Online</h3>
                         <p>Perfect learned</p>
@@ -172,7 +173,6 @@
     </div>
 
     <div class="container text-center">    
-        <h3>What We Do</h3><br>
         <div class="col-sm-4">
             <div class="card">
                 <video width="320" height="240" controls  muted autoplay />
@@ -195,8 +195,20 @@
     </div><br>
 
     <footer class="container-fluid text-center">
+        <div class="side-bottom">
+                    <div class="side-bottom-icons">
+                        <ul class="nav2">
+                            <a target="_blank" href="Contact.jsp" title="ติดต่อเรา"> <h5 class="mt-10">ติดต่อเรา</h5></a>
+                            
+                            </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyright © 2020 Tutor Online. All Rights Reserved | Design by <a href="Contact.jsp">TutorOnline</a></p>
+                    </div>
+                </div>
+        
         <p>Online Perfect Learned!!</p>
-        <a target="_blank" href="Contact.jsp" title="ติดต่อเรา"> <h5 class="mt-10">ติดต่อเรา</h5></a>
+        
         <a id="gotop" href="#" title="Go Top" class="gotop" style="display: inline;"><i class="fa fa-chevron-up"></i><span>กลับด้านบน</span></a>
     </footer>
     <!-- <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">

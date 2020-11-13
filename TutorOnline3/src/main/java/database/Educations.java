@@ -89,7 +89,7 @@ public class Educations implements Serializable {
 
     @Override
     public String toString() {
-        return educationName ;
+        return educationName;
     }
     
 }

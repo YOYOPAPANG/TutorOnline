@@ -73,9 +73,10 @@
                         <li><a href="Subjects">Subjects</a></li>
                         <li><a href="Education">Education</a></li>
                         <li><a href="Contact">Contact</a></li> 
+                        <li><a href="History">History</a></li> 
                         <li class="nav navbar-nav navbar-right">
                             <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
                                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                             </form>
                             <!--                            <form class="navbar-form">
@@ -117,7 +118,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="Picture/p1.jpg" alt="Image" style="height: 600px; width: 1500px;">
+                <img src="Picture/p1.jpg" alt="Image" style="height: 400px; width: 1500px;">
                 <div class="carousel-caption">
                     <h3>Online</h3>
                     <p>Perfect learned</p>
@@ -125,7 +126,7 @@
             </div>
 
             <div class="item">
-                <img src="Picture/p2.jpg" alt="Image" style="height: 600px; width: 1500px;">
+                <img src="Picture/p2.jpg" alt="Image" style="height: 400px; width: 1500px;">
                 <div class="carousel-caption">
                     <h3>Online</h3>
                     <p>Perfect learned</p>
@@ -146,8 +147,7 @@
 
 
 
-    <div class="container text-center">    
-        <h3>What We Do</h3><br>
+    <div class="container text-center">   
         <div class="col-sm-4">
             <div class="card">
                 <video width="320" height="240" controls  muted autoplay />

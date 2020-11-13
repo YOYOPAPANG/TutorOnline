@@ -124,7 +124,7 @@ public class Documents implements Serializable {
 
     @Override
     public String toString() {
-        return "database.Documents[ documentName=" + documentName + " ]";
+        return documentName;
     }
     
 }

@@ -51,7 +51,7 @@ public class Videos implements Serializable {
     @JoinColumn(name = "Subjects_SubjectName", referencedColumnName = "SubjectName")
     @ManyToOne(optional = false)
     private Subjects subjectsSubjectName;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "videos")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "videosVideoName")
     private List<VideosHasUsers> videosHasUsersList;
 
     public Videos() {

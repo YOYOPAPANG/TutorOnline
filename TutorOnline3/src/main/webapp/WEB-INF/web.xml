@@ -52,6 +52,14 @@
         <servlet-name>Classroom2Servlet</servlet-name>
         <servlet-class>servlett.Classroom2Servlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VDOServlet</servlet-name>
+        <servlet-class>servlett.VDOServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HistoryServlet</servlet-name>
+        <servlet-class>servlett.HistoryServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClassroomServlet</servlet-name>
         <url-pattern>/Classroom</url-pattern>
@@ -103,6 +111,14 @@
     <servlet-mapping>
         <servlet-name>Classroom2Servlet</servlet-name>
         <url-pattern>/Classroom2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VDOServlet</servlet-name>
+        <url-pattern>/VDO</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HistoryServlet</servlet-name>
+        <url-pattern>/History</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

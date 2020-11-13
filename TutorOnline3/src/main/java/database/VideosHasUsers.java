@@ -6,18 +6,18 @@
 package database;
 
 import java.io.Serializable;
-import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.EmbeddedId;
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -28,70 +28,65 @@ import javax.xml.bind.annotation.XmlTransient;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "VideosHasUsers.findAll", query = "SELECT v FROM VideosHasUsers v"),
-    @NamedQuery(name = "VideosHasUsers.findByVideosVideoName", query = "SELECT v FROM VideosHasUsers v WHERE v.videosHasUsersPK.videosVideoName = :videosVideoName"),
-    @NamedQuery(name = "VideosHasUsers.findByUsersUsername", query = "SELECT v FROM VideosHasUsers v WHERE v.videosHasUsersPK.usersUsername = :usersUsername")})
+    @NamedQuery(name = "VideosHasUsers.findByHistoryID", query = "SELECT v FROM VideosHasUsers v WHERE v.historyID = :historyID"),
+    @NamedQuery(name = "VideosHasUsers.findByUser", query = "SELECT v FROM VideosHasUsers v WHERE v.usersUsername.username = :username")})
 public class VideosHasUsers implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @EmbeddedId
-    protected VideosHasUsersPK videosHasUsersPK;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "videosHasUsers")
-    private List<Histories> historiesList;
-    @JoinColumn(name = "Users_Username", referencedColumnName = "Username", insertable = false, updatable = false)
+    @Id
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 45)
+    @Column(name = "HistoryID")
+    private String historyID;
+    @JoinColumn(name = "Users_Username", referencedColumnName = "Username")
     @ManyToOne(optional = false)
-    private Users users;
-    @JoinColumn(name = "Videos_VideoName", referencedColumnName = "VideoName", insertable = false, updatable = false)
+    private Users usersUsername;
+    @JoinColumn(name = "Videos_VideoName", referencedColumnName = "VideoName")
     @ManyToOne(optional = false)
-    private Videos videos;
+    private Videos videosVideoName;
 
     public VideosHasUsers() {
     }
 
-    public VideosHasUsers(VideosHasUsersPK videosHasUsersPK) {
-        this.videosHasUsersPK = videosHasUsersPK;
+    public VideosHasUsers(String historyID, Users usersUsername, Videos videosVideoName) {
+        this.historyID = historyID;
+        this.usersUsername = usersUsername;
+        this.videosVideoName = videosVideoName;
     }
 
-    public VideosHasUsers(String videosVideoName, String usersUsername) {
-        this.videosHasUsersPK = new VideosHasUsersPK(videosVideoName, usersUsername);
+    public VideosHasUsers(Users u, Videos video) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public VideosHasUsersPK getVideosHasUsersPK() {
-        return videosHasUsersPK;
+    public String getHistoryID() {
+        return historyID;
     }
 
-    public void setVideosHasUsersPK(VideosHasUsersPK videosHasUsersPK) {
-        this.videosHasUsersPK = videosHasUsersPK;
+    public void setHistoryID(String historyID) {
+        this.historyID = historyID;
     }
 
-    @XmlTransient
-    public List<Histories> getHistoriesList() {
-        return historiesList;
+    public Users getUsersUsername() {
+        return usersUsername;
     }
 
-    public void setHistoriesList(List<Histories> historiesList) {
-        this.historiesList = historiesList;
+    public void setUsersUsername(Users usersUsername) {
+        this.usersUsername = usersUsername;
     }
 
-    public Users getUsers() {
-        return users;
+    public Videos getVideosVideoName() {
+        return videosVideoName;
     }
 
-    public void setUsers(Users users) {
-        this.users = users;
-    }
-
-    public Videos getVideos() {
-        return videos;
-    }
-
-    public void setVideos(Videos videos) {
-        this.videos = videos;
+    public void setVideosVideoName(Videos videosVideoName) {
+        this.videosVideoName = videosVideoName;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (videosHasUsersPK != null ? videosHasUsersPK.hashCode() : 0);
+        hash += (historyID != null ? historyID.hashCode() : 0);
         return hash;
     }
 
@@ -102,7 +97,7 @@ public class VideosHasUsers implements Serializable {
             return false;
         }
         VideosHasUsers other = (VideosHasUsers) object;
-        if ((this.videosHasUsersPK == null && other.videosHasUsersPK != null) || (this.videosHasUsersPK != null && !this.videosHasUsersPK.equals(other.videosHasUsersPK))) {
+        if ((this.historyID == null && other.historyID != null) || (this.historyID != null && !this.historyID.equals(other.historyID))) {
             return false;
         }
         return true;
@@ -110,7 +105,7 @@ public class VideosHasUsers implements Serializable {
 
     @Override
     public String toString() {
-        return "database.VideosHasUsers[ videosHasUsersPK=" + videosHasUsersPK + " ]";
+        return  historyID;
     }
-    
+
 }
