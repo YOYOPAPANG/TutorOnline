@@ -28,8 +28,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "VideosHasUsers.findAll", query = "SELECT v FROM VideosHasUsers v"),
-    @NamedQuery(name = "VideosHasUsers.findByHistoryID", query = "SELECT v FROM VideosHasUsers v WHERE v.historyID = :historyID"),
-    @NamedQuery(name = "VideosHasUsers.findByUser", query = "SELECT v FROM VideosHasUsers v WHERE v.usersUsername.username = :username")})
+     @NamedQuery(name = "VideosHasUsers.findByUser", query = "SELECT v FROM VideosHasUsers v WHERE v.usersUsername.username = :username"),
+    @NamedQuery(name = "VideosHasUsers.findByHistoryID", query = "SELECT v FROM VideosHasUsers v WHERE v.historyID = :historyID")})
 public class VideosHasUsers implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,14 +49,14 @@ public class VideosHasUsers implements Serializable {
     public VideosHasUsers() {
     }
 
+    public VideosHasUsers(String historyID) {
+        this.historyID = historyID;
+    }
+
     public VideosHasUsers(String historyID, Users usersUsername, Videos videosVideoName) {
         this.historyID = historyID;
         this.usersUsername = usersUsername;
         this.videosVideoName = videosVideoName;
-    }
-
-    public VideosHasUsers(Users u, Videos video) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getHistoryID() {
@@ -105,7 +105,7 @@ public class VideosHasUsers implements Serializable {
 
     @Override
     public String toString() {
-        return  historyID;
+        return historyID;
     }
-
+    
 }

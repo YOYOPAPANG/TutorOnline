@@ -5,7 +5,6 @@
  */
 package servlett;
 
-import database.Subjects;
 import database.Videos;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ASUS
  */
-public class SubjectsServlet extends HttpServlet {
+public class SearchVideosServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,31 +35,18 @@ public class SubjectsServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String searchParam = request.getParameter("search");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_TutorOnline3_war_1.0-SNAPSHOTPU");
         EntityManager em = emf.createEntityManager();
-        String subject = request.getParameter("subject");
+        String sql = "SELECT v FROM Videos v WHERE v.videoName like :vd";
+        Query que = em.createQuery(sql);
+        que.setParameter("vd", "%" + searchParam + "%");
 
-        if (subject != null) {
-            //Query que = em.createNamedQuery("Videos.findBySubject");
-            Subjects s = em.find(Subjects.class, subject);
-            Query que = em.createQuery("SELECT v FROM Videos v WHERE v.subjectsSubjectName.subjectName like :subject");
-            que.setParameter("subject", s.getSubjectName());
-
-            List<Videos> vs = que.getResultList();
-            request.setAttribute("videos", vs);
-            request.getRequestDispatcher("Classroom.jsp").forward(request, response);
-
-        } else {
-            String sql = "SELECT s FROM Subjects s";
-
-            Query que = em.createQuery(sql);
-            System.out.println(que);
-
-            List<Subjects> subjects = que.getResultList();
-            request.setAttribute("subjects", subjects);
-            request.getRequestDispatcher("Subjects.jsp").forward(request, response);
-        }
-
+        List<Videos> vds = que.getResultList();
+        request.setAttribute("videos", vds);
+        
+        
+        request.getRequestDispatcher("SearchVideos.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
         <style>
             /* Remove the navbar's default margin-bottom and rounded borders */ 
             .navbar {
@@ -53,69 +54,42 @@
                     </button>
 
 
-                    <a class="navbar-brand" href="#">Tutor Online</a>
+                    <a class="navbar-brand" href="index.jsp">Tutor Online</a>
 
                 </div>
-                <div class="wrapper-login" style="width: 200px;
-                     height: 30px;
-                     margin-top: 15px;
-                     float: right;
-                     margin-right: 20px;">
-                    <div class="icon-img-user"><img src="Picture/icon-login.png" style="
-                                                    width: 30px;
-                                                    height: 30px;
-                                                    border-radius: 100%;
-                                                    background-color: white;
-                                                    overflow: hidden;
-                                                    float: left;"> 
-                    </div>
 
-                    <a class="btn-login" href="Login.jsp" style="    
-                       width: 54px;
-                       font-family: 'TrueTextB';
-                       font-size: 22px;
-                       text-transform: capitalize;
-                       color: #888888;
-                       line-height: 30px;
-                       cursor: pointer;
-                       float: left;
-                       margin-left: 10px;">login</a>
-
-                    <div class="font-line-height" style="
-                         width: 2px;
-                         font-family: 'TrueTextB';
-                         font-size: 24px;
-                         text-transform: capitalize;
-                         color: #888888;
-                         line-height: 30px;
-                         float: left;
-                         margin-left: 12px;">   |</div>
-                    <a class="btn-register" href="Register.jsp"style="
-                       width: 54px;
-                       font-family: 'TrueTextB';
-                       font-size: 22px;
-                       text-transform: capitalize;
-                       color: #888888;
-                       line-height: 30px;
-                       cursor: pointer;
-                       float: left;
-                       margin-left: 10px;
-                       }">register</a>
-                </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="Home.jsp">Home</a></li>
-                        <li><a href="Login.jsp">Classroom</a></li>
-                        <li><a href="Login.jsp">Subject</a></li>
-                        <li><a href="Login.jsp">Education</a></li>
-                        <li class="active"><a href="Login.jsp">Contact</a></li>     
-
+                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li><a href="Classroom">Classroom</a></li>
+                        <li><a href="Subjects">Subjects</a></li>
+                        <li><a href="Contact">Contact</a></li> 
+                        <li><a href="History">History</a></li> 
+                        <li class="nav navbar-nav navbar-right">
+                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
+                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
+                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                            <!--                            <form class="navbar-form">
+                                                                <div class="form-group" style="display:inline;">
+                                                                    <div class="input-group" style="display:table;">
+                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+                                                                    </div>
+                                                                </div>
+                                                            </form>-->
+                        </li>
                     </ul>
-                </div>
 
-            </div>
 
-        </nav>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Logout" >${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in"></span> &nbsp; Logout</a></a></li>
+                    </ul>
+                </div></div>
+
+        </div>
+
+    </nav>  
 
         <div style="text-align:center; width:1003px; background: url('images/MainBox/grey_index_center.jpg') repeat-y;">
 

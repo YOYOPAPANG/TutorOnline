@@ -32,7 +32,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bootstrap Example</title>
+        <title>Classroom</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -45,7 +45,7 @@
                 border-radius: 0;
             }
             body {
-                background-color: #0d0d0d;
+                background-color: #ffffff;
             }
 
 
@@ -72,7 +72,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-inverse">
+         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -82,138 +82,47 @@
                     </button>
 
 
-                    <a class="navbar-brand" href="#">Tutor Online</a>
+                    <a class="navbar-brand" href="index.jsp">Tutor Online</a>
 
                 </div>
-                <div class="wrapper-login" style="width: 200px;
-                     height: 30px;
-                     margin-top: 15px;
-                     float: right;
-                     margin-right: 20px;">
-                    <div class="icon-img-user">
-                        <!--                    <img src="Picture/icon-login.png" style="
-                                                                            width: 30px;
-                                                                            height: 30px;
-                                                                            border-radius: 100%;
-                                                                            background-color: white;
-                                                                            overflow: hidden;
-                                                                            float: left;"> -->
-                    </div>
-                </div>
-
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.jsp">Home</a></li>
-                        <li class="active"><a href="Login.jsp">Classroom</a></li>
-                        <li><a href="Subjects">Subject</a></li>
-                        <li><a href="Education">Education</a></li>
-                        <li><a href="Contact">Contact</a></li>     
+                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li><a href="Classroom">Classroom</a></li>
+                        <li><a href="Subjects">Subjects</a></li>
+                        <li><a href="Contact">Contact</a></li> 
+                        <li><a href="History">History</a></li> 
                         <li class="nav navbar-nav navbar-right">
                             <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
                                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                             </form>
-                            <!--                            <form class="navbar-form" action="Search" method="GET">
-                                                            <div class="form-group" style="display:inline;">
-                                                                <div class="input-group" style="display:table;">
-                                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                                                    <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-                                                                    <button type="submit">Search</button>
+                            <!--                            <form class="navbar-form">
+                                                                <div class="form-group" style="display:inline;">
+                                                                    <div class="input-group" style="display:table;">
+                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </form>-->
+                                                            </form>-->
                         </li>
                     </ul>
+
+
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="Logout" >${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in"></span> &nbsp; Logout</a></a></li>
                     </ul>
-                </div>
+                </div></div>
 
-            </div>
+        </div>
 
-        </nav>
-
-    </div>
-    
-
-    <!--        <div class="container text-center">    
-                <h3>Classroom Online</h3><br>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <a href="Video.jsp" target="_blank" rel="nofollow">
-                        <video width="320" height="240" border="0"/>
-                        <source src="vdo/1.mp4" alt="video" >
-                    </a></div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <video width="320" height="240" border="0"/>
-                        <source src="vdo/2.mp4" alt="video" >
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <video width="320" height="240" border="0"/>
-                        <source src="vdo/3.mp4" alt="video" >
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <video width="320" height="240" border="0"/>
-                        <source src="vdo/4.mp4" alt="video" >
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <video width="320" height="240" border="0"/>
-                        <source src="vdo/6.mp4" alt="video" >
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <video width="320" height="240" border="0"/>
-                        <source src="vdo/7.mp4" alt="video" >
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <video width="320" height="240" border="0"/>
-                            <source src="vdo/8.mp4" alt="video" >
-                            </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <video width="320" height="240" border="0"/>
-                                    <source src="vdo/9.mp4" alt="video" >
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <video width="320" height="240" border="0"/>
-                                    <source src="vdo/10.mp4" alt="video" >
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <video width="320" height="240" border="0"/>
-                                    <source src="vdo/11.mp4" alt="video" >
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="card">
-                                    <video width="320" height="240" border="0"/>
-                                    <source src="vdo/12.mp4" alt="video" >
-                                </div>
-                            </div>
-    
-                    </div>
-                </div><br>-->
+    </nav>
 
     <div id="templatemo_search">
-        <form action="Serch" method="get">
-            <input type="text" value="" name="search" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field">
-            <input type="submit" name="search" value=" " alt="search" id="search" title="search" class="sub_btn">
+        <form class="form-inline my-2 my-lg-0" action="SearchVideos" method="GET">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Video" aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
     <div id="templatemo_main">
@@ -221,23 +130,23 @@
         <div id="content" class="float_r">
             <h1>Videos</h1>
             <c:forEach items="${videos}" var="vd">
-            <div class="product_box" >
-                <b> ${vd.videoName}</b>
-                <p>${vd.subjectsSubjectName}</p>
-                
-                <a href="VDO?vd=${vd.videoName}">
+                <div class="product_box" >
+                    <b> ${vd.videoName}</b>
+                    <p>${vd.subjectsSubjectName}</p>
 
-                <img src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"/>
-<!--                     <iframe width="560" height="315" src="${vd.videoURL}" 
-                     frameborder="0"  allowfullscreen>
-                </iframe><br>-->
+                    <a href="VDO?vd=${vd.videoName}">
 
-            </a>
-            </div>        	
+                        <img src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"/>
+        <!--                     <iframe width="560" height="315" src="${vd.videoURL}" 
+                             frameborder="0"  allowfullscreen>
+                        </iframe><br>-->
+
+                    </a>
+                </div>        	
 
 
 
-          </c:forEach>
+            </c:forEach>
         </div> 
         <div class="cleaner"></div>
     </div>

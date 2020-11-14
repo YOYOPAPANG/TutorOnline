@@ -1,21 +1,6 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <%-- 
-    Document   : Subjects
-    Created on : Nov 11, 2020, 10:56:18 PM
+    Document   : SearchVideos
+    Created on : Nov 14, 2020, 8:25:22 PM
     Author     : ASUS
 --%>
 
@@ -25,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Subject</title>
+        <title>Search Video</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -64,7 +49,7 @@
         </style>
     </head>
     <body>
-          <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -109,15 +94,21 @@
 
         </div>
 
-    </nav>
-
-        <h1>&nbsp;Subjects&nbsp;</h1>
-        <c:forEach items="${subjects}" var="s">
-            <div class="card col-md-4 col-xl-2"> <img class="card-img-top rounded img-fluid" src="subject/${s.subjectName}.jpg " alt="Card image cap" width="250" height="250"> 
+    </nav>  
+    <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Search Video&nbsp;</strong></em></h1>
+    <div class="container-fluid">
+        <div class="row">
+            <c:forEach items="${videos}" var="vd">
+                <a href="VDO?vd=${vd.videoName}">
+                    <div class="card col-md-4 col-xl-2"> 
+                        <img src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"/> 
+                </a>
                 <div class="card-body">
-                    <a href="Subjects?subject=${s.subjectName}"><h5 class="card-title">${s.subjectName}</h5></a>
+                    <h5 class="card-title">${vd.videoName}</h5>
                 </div>
             </div>
         </c:forEach>
-    </body>
+    </div>              
+</div>
+</body>
 </html>

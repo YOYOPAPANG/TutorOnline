@@ -105,7 +105,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="Home.">Home</a></li>
+                        <li class="active"><a href="Login.jsp">Home</a></li>
                         <li><a href="Login.jsp">Classroom</a></li>
                         <li><a href="Login.jsp">Subject</a></li>
                         <li><a href="Login.jsp">Education</a></li>

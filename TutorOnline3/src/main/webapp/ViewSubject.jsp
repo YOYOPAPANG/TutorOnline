@@ -1,70 +1,17 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <%-- 
-    Document   : Subjects
-    Created on : Nov 11, 2020, 10:56:18 PM
+    Document   : ViewSubject
+    Created on : Nov 15, 2020, 3:49:06 AM
     Author     : ASUS
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Subject</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <style>
-            /* Remove the navbar's default margin-bottom and rounded borders */ 
-            .navbar {
-                margin-bottom: 0;
-                border-radius: 0;
-            }
-            body {
-                background-color: #ffffff;
-            }
-
-
-            /* Add a gray background color and some padding to the footer */
-            footer {
-                background-color: #333333;
-                padding: 25px;
-
-            }
-
-            .carousel-inner img {
-                width: 100%; /* Set width to 100% */
-                margin: auto;
-                min-height:200px;
-            }
-
-            /* Hide the carousel text when the screen is less than 600 pixels wide */
-            @media (max-width: 600px) {
-                .carousel-caption {
-                    display: none; 
-                }
-            }
-        </style>
+        <title>view Subject</title>
     </head>
-    <body>
-          <nav class="navbar navbar-inverse">
+    <body><nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -106,18 +53,8 @@
                         <li><a href="Logout" >${us.fname} ${us.lname} <span class="glyphicon glyphicon-log-in"></span> &nbsp; Logout</a></a></li>
                     </ul>
                 </div></div>
-
         </div>
-
-    </nav>
-
-        <h1>&nbsp;Subjects&nbsp;</h1>
-        <c:forEach items="${subjects}" var="s">
-            <div class="card col-md-4 col-xl-2"> <img class="card-img-top rounded img-fluid" src="subject/${s.subjectName}.jpg " alt="Card image cap" width="250" height="250"> 
-                <div class="card-body">
-                    <a href="Subjects?subject=${s.subjectName}"><h5 class="card-title">${s.subjectName}</h5></a>
-                </div>
-            </div>
-        </c:forEach>
-    </body>
+    </nav>  
+    <h1>Hello World!</h1>
+</body>
 </html>

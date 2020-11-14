@@ -20,7 +20,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
 /**
  *
  * @author ASUS
@@ -41,14 +40,14 @@ public class HistoryServlet extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_TutorOnline3_war_1.0-SNAPSHOTPU");
         EntityManager em = emf.createEntityManager();
         HttpSession session = request.getSession();
-        Users u =    (Users) session.getAttribute("us");
+        Users u = (Users) session.getAttribute("us");
 //        String sql = "SELECT v FROM VideosHasUsers v WHERE v.usersUsername like :u";
 //        Query que = em.createQuery(sql);
 //        que.setParameter("username", u);
 //        List<VideosHasUsers> vhu = que.getResultList();
-        
+
         List<VideosHasUsers> vhu = em.createNamedQuery("VideosHasUsers.findByUser").setParameter("username", u.getUsername()).getResultList();
-        
+
         request.setAttribute("vhu", vhu);
         request.getRequestDispatcher("History.jsp").forward(request, response);
     }

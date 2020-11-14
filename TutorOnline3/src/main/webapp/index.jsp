@@ -62,16 +62,15 @@
                     </button>
 
 
-                    <a class="navbar-brand" href="#">Tutor Online</a>
+                    <a class="navbar-brand" href="index.jsp">Tutor Online</a>
 
                 </div>
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="index.jsp">Home</a></li>
                         <li><a href="Classroom">Classroom</a></li>
                         <li><a href="Subjects">Subjects</a></li>
-                        <li><a href="Education">Education</a></li>
                         <li><a href="Contact">Contact</a></li> 
                         <li><a href="History">History</a></li> 
                         <li class="nav navbar-nav navbar-right">
@@ -150,19 +149,19 @@
     <div class="container text-center">   
         <div class="col-sm-4">
             <div class="card">
-                <video width="320" height="240" controls  muted autoplay />
+                <video width="320" height="240" controls  muted autoplay loop/>
                 <source src="Video/1.mp4" alt="video" >
             </div>
         </div>
         <div class="col-sm-4">
             <div class="card">
-                <video width="320" height="240" controls muted autoplay/>
+                <video width="320" height="240" controls muted autoplay loop/>
                 <source src="Video/2.mp4" alt="video" >
             </div>
         </div>
         <div class="col-sm-4">
             <div class="card">
-                <video width="320" height="240" controls muted autoplay />
+                <video width="320" height="240" controls muted autoplay loop/>
                 <source src="Video/4.mp4" alt="video" >
             </div>
         </div>

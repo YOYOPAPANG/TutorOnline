@@ -6,24 +6,22 @@
 package servlett;
 
 import database.Subjects;
-import database.Videos;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author ASUS
  */
-public class SubjectsServlet extends HttpServlet {
+public class ViewSubjectServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,29 +36,13 @@ public class SubjectsServlet extends HttpServlet {
             throws ServletException, IOException {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_TutorOnline3_war_1.0-SNAPSHOTPU");
         EntityManager em = emf.createEntityManager();
-        String subject = request.getParameter("subject");
-
-        if (subject != null) {
-            //Query que = em.createNamedQuery("Videos.findBySubject");
-            Subjects s = em.find(Subjects.class, subject);
-            Query que = em.createQuery("SELECT v FROM Videos v WHERE v.subjectsSubjectName.subjectName like :subject");
-            que.setParameter("subject", s.getSubjectName());
-
-            List<Videos> vs = que.getResultList();
-            request.setAttribute("videos", vs);
-            request.getRequestDispatcher("Classroom.jsp").forward(request, response);
-
-        } else {
-            String sql = "SELECT s FROM Subjects s";
-
-            Query que = em.createQuery(sql);
-            System.out.println(que);
-
-            List<Subjects> subjects = que.getResultList();
-            request.setAttribute("subjects", subjects);
-            request.getRequestDispatcher("Subjects.jsp").forward(request, response);
-        }
-
+        String sj = request.getParameter("sj");
+        Subjects subject =em.find(Subjects.class, sj);
+        
+        HttpSession session = request.getSession();
+        
+        Subjects s =(Subjects)session.getAttribute("ss");
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
