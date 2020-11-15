@@ -72,6 +72,22 @@
         <servlet-name>AddvideoServlet</servlet-name>
         <servlet-class>servlett.AddvideoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditProfileServlet</servlet-name>
+        <servlet-class>servlett.EditProfileServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MyProfileServlet</servlet-name>
+        <servlet-class>servlett.MyProfileServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ForgotPasswordServlet</servlet-name>
+        <servlet-class>servlett.ForgotPasswordServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveVDOServlet</servlet-name>
+        <servlet-class>servlett.RemoveVDOServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClassroomServlet</servlet-name>
         <url-pattern>/Classroom</url-pattern>
@@ -143,6 +159,22 @@
     <servlet-mapping>
         <servlet-name>AddvideoServlet</servlet-name>
         <url-pattern>/Addvideo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditProfileServlet</servlet-name>
+        <url-pattern>/EditProfile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyProfileServlet</servlet-name>
+        <url-pattern>/MyProfile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForgotPasswordServlet</servlet-name>
+        <url-pattern>/ForgotPassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveVDOServlet</servlet-name>
+        <url-pattern>/RemoveVDO</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

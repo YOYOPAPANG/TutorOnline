@@ -60,25 +60,12 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li><a href="index.jsp">Home</a></li>
                         <li><a href="Classroom">Classroom</a></li>
                         <li><a href="Subjects">Subjects</a></li>
-                        <li><a href="Contact">Contact</a></li> 
+                        <li class="active"><a href="Contact">Contact</a></li> 
                         <li><a href="History">History</a></li> 
-                        <li class="nav navbar-nav navbar-right">
-                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
-                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!--                            <form class="navbar-form">
-                                                                <div class="form-group" style="display:inline;">
-                                                                    <div class="input-group" style="display:table;">
-                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-                                                                    </div>
-                                                                </div>
-                                                            </form>-->
-                        </li>
+                        
                     </ul>
 
 
@@ -96,15 +83,8 @@
             <div style="text-align:center;">
 
                 <div style="text-align:center; vertical-align:top; float:left; overflow:hidden;width:243px; margin-top:10px; padding-left:4px;" id="MenuLeftAll">
-                    <div align="right">
-
-                        <table cellpadding="0" cellspacing="0" border="0">
-                            <tbody><tr>
-                                    <td align="center"> <img src="images/leftmenu/img_cntctus_01.gif" width="233" height="149" alt=""></td>
-                                </tr>
-                            </tbody></table>
-
-                    </div><div style="height:10px; clear:both;"></div> 
+   
+                    <div style="height:10px; clear:both;"></div> 
 
                     <div style="padding-top:2px;">
                         <table cellpadding="0" cellspacing="0" border="0" style="width:100%;">
@@ -121,17 +101,10 @@
 
                 <div style="text-align:left; vertical-align:top; float:right; overflow:hidden; width:735px; margin-top:10px; margin-left:8px; padding-right:8px;" id="MainBox">
 
-                    <div style="width:735px;">
-
-                        <table style="width:100%;" cellpadding="0" cellspacing="0" border="0">
-                        </table>
-
-                    </div>
 
 
 
-
-                    <div>&nbsp;</div>
+                    <center><div>&nbsp;</div>
 
                     <div style="text-align:center; font-weight:bold;"><a href="./about_us.php" style="font-size:1.1em; font-weight:bold;">ติดต่อเจ้าหน้าที่</a> <span style="color:#ed1c24;">|</span> <a href="./activity_us.php" style="font-size:1.1em; font-weight:bold;">กิจกรรมของติวเตอร์</a> <span style="color:#ed1c24;">|</span> <a href="./contact_us.php" style="font-size:1.1em; font-weight:bold; color:#ed1c24;">รีวิวติวเตอร์ออนไลน์</a></div>
 
@@ -190,11 +163,16 @@
                                                     Makkasan Sub-area <br>
                                                     Ratchathewi Area<br>
                                                     Krung Thep Maha Nakhon<br>
-                                                    10400<br>
-                                                    Thailand<br>
+                                                    10400 Thailand<br>
+                                                    <br>
 
 
-                                    </table>
+                                    </table><img src="Picture/123.jpg" width="400" height="280" alt="">
+                                    <h4 align="center"> ทีมงาน Tutor Online</h4>
+                                    <h5 align="center"> Thanunkorn Kasornsirisist</h5>
+                                    <h5 align="center"> Pantip Kladsombut</h5>
+                                    <h5 align="center"> Thanwat A-riyapurk</h5>
+                                   
                                 </div>
 
                                 <div>&nbsp;</div>
@@ -220,14 +198,20 @@
                     </div>
 
                     <div>&nbsp;</div>
+                         
+                                    
+                             
+                              
+                    </div></center>
                 </div>
 
 
                 <div style="text-align:center; clear:both; width:1003px; height:7px; overflow: hidden; background: url('images/MainBox/grey_index_end.jpg') no-repeat;"></div>
 
-            </div>
+</div>
 
         </div>
+                    
 
 
 

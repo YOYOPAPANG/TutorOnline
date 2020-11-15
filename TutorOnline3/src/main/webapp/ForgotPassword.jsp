@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Login
-    Created on : Oct 29, 2020, 8:41:25 PM
+    Document   : test
+    Created on : Nov 13, 2020, 12:35:24 PM
     Author     : ASUS
 --%>
 
@@ -53,46 +53,50 @@
                              border-radius: .25rem;">
                             <div class="text-center mb-2 mb-md-4" ">
                                 <div class="mb-0 txt_headwelcome" style="    font-size: 40px;
-                                     color: #333;">ยินดีต้อนรับ</div>
+                                     color: #333;">Forgot Password</div>
                             </div>
-                            <script type="text/javascript">
-                                function fncSubmit()
-                                {
-                                    if (document.getElementById('Username').value == "")
-                                    {
-                                        alert('กรุณากรอก username');
+                            <script>
+                                function myFunction() {
+                                    var Username = document.getElementById("Username").value;
+                                    if (Username === null || Username === "") {
+                                        alert("กรุณากรอก Username");
                                         return false;
                                     }
-                                    if (document.getElementById('Password').value == "")
-                                    {
-                                        alert('กรุณากรอก password');
+                                    var Password = document.getElementById("Password").value;
+                                    var Conpassword = document.getElementById("Conpassword").value;
+                                    if (Password !== Conpassword) {
+                                        alert("รหัสผ่านไม่ตรงกัน");
                                         return false;
+                                    } else {
+                                        alert("รหัสผ่านตรงกัน ");
+                                        return true;
                                     }
+                                    
+
                                 }
                             </script>
-
-                            <form action="Login" method="POST" onsubmit="JavaScript:return fncSubmit();">
+                            <form  action="ForgotPassword" method="POST" onsubmit="return myFunction()">
                                 <div class="row pb-md-5" style="">
                                     <div class="col-12  border-right-md-1 pt-3 pb-2 pr-md-3">
-                                        <div class="form-group form-group-feedback form-group-feedback-right" >
+                                        <div class="form-group form-group-feedback form-group-feedback-">
                                             <input type="text" name="Username" id="Username" class="form-control border-gray border" placeholder="Username" value="">
                                         </div>
-                                        <div class="form-group form-group-feedback form-group-feedback-">
-                                            <input type="password" name="Password" id="Password" class="form-control border-gray border" placeholder="Password" value="">
+                                        <div class="form-group form-group-feedback form-group-feedback-" >
+                                            <input type="password" name="Password" id="Password" class="form-control border-gray border" placeholder="New Password" value="">
                                         </div>
+                                        <div class="form-group form-group-feedback form-group-feedback-">
+                                            <input type="password" name="NewPassword" id="Conpassword" class="form-control border-gray border" placeholder="Confirm Password" value="">
+                                        </div>
+
                                         <div class="mx-auto">
                                             <!--<button type="submit" class="btn btn_grey_login py-1 btn-block">Sign in</button>-->
-                                            <button type="submit" class="btn btn_grey_login py-1 btn-block" name ="Login" style="border-radius: 5rem;
+                                            <button type="submit" class="btn btn_grey_login py-1 btn-block" name ="ForgotPassword" style="border-radius: 5rem;
                                                     font-size: 1.2rem;
                                                     padding: .1375rem .875rem;
                                                     color: #FFF;
                                                     background-color: #D4D4D4;
-                                                    border: 1px solid #D4D4D4;">Sign in</button>
-                                            <div class="d-flex justify-content-around pt-3">
-                                                <div class="ml-3"><a href="ForgotPassword.jsp" class="txt_grey" style="color: #A6A6B2;">ลืมรหัสผ่าน</a></div>
-                                                <div class="txt_grey">|</div>
-                                                <div class="mr-3"><a href="Register.jsp" class="txt_grey" style="color: #A6A6B2;">สมัครสมาชิก</a></div>
-                                            </div>
+                                                    border: 1px solid #D4D4D4;">Submit</button>
+
                                         </div>
                                     </div>
                                 </div>
@@ -102,38 +106,6 @@
                     </div>              
                 </div>
             </div>
-        </div>
-
-
-
-
-
-        <!--  <div style="margin-left: 100px">
-             <form class="form-control" action="Login" method="POST">
- 
-                 <tr style="height: 50px;
-                     padding-right: 2.75rem;">
-                     <td>Username: </td>
-                     <td><input type="text" name ="Username" /></td>
- 
-                 </tr>
-                 <tr style="height: 50px">
-                     <td>Password: </td>
-                     <td><input type="password" name ="Password"/></td>
- 
-                 </tr>
-                 <tr style="height: 50px" >
-                     <td></td>
-                     <td><input type="submit" name ="Login" value="Submit"/></td>
-                 </tr>
-                 <tr>
-                     <td></td>
-                 </tr>
-                 <br><br>
-                 Don’t have an account? <a class="highlight" href="Register.jsp">Register</a><br>
-                 <br><br>
-             </form>
- 
-         </div> -->
-    </body>
+        </div></form>
+</body>
 </html>

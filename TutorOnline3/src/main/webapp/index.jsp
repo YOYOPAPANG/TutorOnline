@@ -73,20 +73,7 @@
                         <li><a href="Subjects">Subjects</a></li>
                         <li><a href="Contact">Contact</a></li> 
                         <li><a href="History">History</a></li> 
-                        <li class="nav navbar-nav navbar-right">
-                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
-                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!--                            <form class="navbar-form">
-                                                                <div class="form-group" style="display:inline;">
-                                                                    <div class="input-group" style="display:table;">
-                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-                                                                    </div>
-                                                                </div>
-                                                            </form>-->
-                        </li>
+                        
                     </ul>
 
 
@@ -125,7 +112,7 @@
             </div>
 
             <div class="item">
-                <img src="Picture/p2.jpg" alt="Image" style="height: 400px; width: 1500px;">
+                <img src="Picture/12345.jpg" alt="Image" style="height: 400px; width: 1500px;">
                 <div class="carousel-caption">
                     <h3>Online</h3>
                     <p>Perfect learned</p>

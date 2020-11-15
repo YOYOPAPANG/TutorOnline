@@ -66,6 +66,14 @@ public class Videos implements Serializable {
         this.videoURL = videoURL;
     }
 
+    public Videos(String videoName, String videoURL, Subjects subjectsSubjectName) {
+        this.videoName = videoName;
+        this.videoURL = videoURL;
+        this.subjectsSubjectName = subjectsSubjectName;
+    }
+    
+    
+
     public String getVideoName() {
         return videoName;
     }

@@ -61,7 +61,10 @@
                 margin: auto;
                 min-height:200px;
             }
-
+            .active-cyan-3 input[type=text] {
+                border: 1px solid #4dd0e1;
+                box-shadow: 0 0 0 1px #4dd0e1;
+            }
             /* Hide the carousel text when the screen is less than 600 pixels wide */
             @media (max-width: 600px) {
                 .carousel-caption {
@@ -71,6 +74,7 @@
         </style>
     </head>
     <body>
+
 
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -88,25 +92,12 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
-                        <li><a href="Classroom">Classroom</a></li>
+                        <li><a href="index.jsp">Home</a></li>
+                        <li class="active"><a href="Classroom">Classroom</a></li>
                         <li><a href="Subjects">Subjects</a></li>
                         <li><a href="Contact">Contact</a></li> 
-                        <li><a href="History">History</a></li> 
-                        <li class="nav navbar-nav navbar-right">
-                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
-                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!--                            <form class="navbar-form">
-                                                                <div class="form-group" style="display:inline;">
-                                                                    <div class="input-group" style="display:table;">
-                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-                                                                    </div>
-                                                                </div>
-                                                            </form>-->
-                        </li>
+                        <li><a href="History">History</a></li>
+                        
                     </ul>
 
 
@@ -118,31 +109,37 @@
         </div>
 
     </nav>
-
-    <div id="templatemo_search">
+              
+    <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Video Classroom&nbsp;</strong></em></h1>
+    <h4 class="text-uppercase text-justify"><em> <a href="AddVideo.jsp">Add Video</a></em><br></h4>
+<center><div id="templatemo_search" >
         <form class="form-inline my-2 my-lg-0" action="SearchVideos" method="GET">
             <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Video" aria-label="Search">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </form>
-    </div>
-    <h1>&nbsp;Videos&nbsp;</h1>
-    <h4> <a href="AddVideo.jsp">Add Video</a><br></h4>
-    <div class="container-fluid">
-        <div class="row">
-            <c:forEach items="${videos}" var="vd">
-                
+
+    </div></center>
+<br>
+<div class="container-fluid" >
+    <div class="row" >
+        <c:forEach items="${videos}" var="vd"><center>
+
                 <a href="VDO?vd=${vd.videoName}">
-                    <div class="card col-md-4 col-xl-2"> 
-                        <img src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"/> 
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">${vd.videoName}</h5>
-                    <h5 class="card-title">${vd.subjectsSubjectName}</h5>
-                </div><br><br>
-            </div>
-        </c:forEach>
+                    <div class="card col-md-4 col-xl-2 " > 
+                        <div class="card" style="border:1px solid black">
+                            <img width="470" height="350" src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"  frameborder="0" /> 
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><a href="VDO?vd=${vd.videoName}">VDO Name : ${vd.videoName}</a></h5>
+                                <h5 class="card-title">Subject Name : ${vd.subjectsSubjectName}</h5>
+                            </div></div><br>
+                    </div></center>
+                </c:forEach>
     </div>              
-    </div><br><br>
+</div>
+
+
+
 
 <footer class="container-fluid text-center">
     <p>Online Perfect Learned!!</p>

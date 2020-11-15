@@ -5,10 +5,9 @@
  */
 package servlett;
 
-import database.Videos;
+import database.Users;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -23,7 +22,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author ASUS
  */
-public class ContactServlet extends HttpServlet {
+public class ForgotPasswordServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,8 +38,25 @@ public class ContactServlet extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_TutorOnline3_war_1.0-SNAPSHOTPU");
         EntityManager em = emf.createEntityManager();
 
-        
-        request.getRequestDispatcher("Contact.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        String username = request.getParameter("Username");
+        String password = request.getParameter("Password");
+        String newPassword = request.getParameter("NewPassword");
+
+        if (password != null) {
+            Users ps = em.find(Users.class, username);
+            if (ps != null) {
+
+                ps.setPassword(newPassword);
+
+                em.getTransaction().begin();
+                em.merge(ps);
+                em.getTransaction().commit();
+                request.getRequestDispatcher("Login.jsp").forward(request, response);
+                return;
+            }
+            request.getRequestDispatcher("ForgotPassword.jsp").forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

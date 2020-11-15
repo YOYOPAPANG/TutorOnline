@@ -59,25 +59,25 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
-                        <li><a href="Classroom">Classroom</a></li>
+                        <li><a href="index.jsp">Home</a></li>
+                        <li class="active"><a href="Classroom">Classroom</a></li>
                         <li><a href="Subjects">Subjects</a></li>
                         <li><a href="Contact">Contact</a></li> 
                         <li><a href="History">History</a></li> 
-                        <li class="nav navbar-nav navbar-right">
+<!--                        <li class="nav navbar-nav navbar-right">
                             <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
                                 <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
                                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                             </form>
-                            <!--                            <form class="navbar-form">
+                                                        <form class="navbar-form">
                                                                 <div class="form-group" style="display:inline;">
                                                                     <div class="input-group" style="display:table;">
                                                                         <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
                                                                         <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
                                                                     </div>
                                                                 </div>
-                                                            </form>-->
-                        </li>
+                                                            </form>
+                        </li>-->
                     </ul>
 
 
@@ -88,13 +88,15 @@
 
         </div>
 
-    </nav>  
-
-    <h3>${video.videoName}</h3>
-    <h5>${video.subjectsSubjectName}</h5>
-    <iframe width="560" height="315" src="https://youtube.com/embed/${video.videoURL}"
-            frameborder="0"  allowfullscreen>
+    </nav>
+    <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Let's get Start!!&nbsp;</strong></em></h1>    
+    <center>
+        <h3>VDO Name : ${video.videoName}</h3>
+    <h5>Subject Name : ${video.subjectsSubjectName}</h5>
+    <iframe width="900" height="500" src="https://youtube.com/embed/${video.videoURL}"
+            frameborder="0"  allowfullscreen autoplay>
     </iframe><br>
+    </center>
 
 </body>
 </html>

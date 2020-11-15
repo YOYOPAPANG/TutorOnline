@@ -65,25 +65,12 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li ><a href="index.jsp">Home</a></li>
                         <li><a href="Classroom">Classroom</a></li>
-                        <li><a href="Subjects">Subjects</a></li>
+                        <li class="active"><a href="Subjects">Subjects</a></li>
                         <li><a href="Contact">Contact</a></li> 
                         <li><a href="History">History</a></li> 
-                        <li class="nav navbar-nav navbar-right">
-                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
-                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!--                            <form class="navbar-form">
-                                                                <div class="form-group" style="display:inline;">
-                                                                    <div class="input-group" style="display:table;">
-                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-                                                                    </div>
-                                                                </div>
-                                                            </form>-->
-                        </li>
+                        
                     </ul>
 
 
@@ -96,12 +83,18 @@
 
     </nav>  
     <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Search Subject&nbsp;</strong></em></h1>
+     <center><form class="form-inline my-2 my-lg-0" action="Search" method="GET">
+        <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form></center><br>
+        
     <div class="container-fluid">
         <div class="row">
             <c:forEach items="${subjects}" var="s">
                 ${s.subjectName}
                 <a href="Subjects?subject=${s.subjectName}">
-                    <div class="card col-md-4 col-xl-2"> <img class="card-img-top rounded img-fluid" src="subject/${s.subjectName}.jpg " alt="Card image cap" width="250" height="250"> 
+                    <div class="card col-md-4 col-xl-2"> 
+                        <img class="card-img-top rounded img-fluid" src="subject/${s.subjectName}.jpg " alt="Card image cap" width="470" height="350" > 
                         <div class="card-body">
                             <h5 class="card-title">${s.subjectName}</h5>
                         </div>

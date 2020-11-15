@@ -38,25 +38,28 @@ public class AddvideoServlet extends HttpServlet {
         EntityManager em = emf.createEntityManager();
 
         String videoname = request.getParameter("VideoName");
-        String videourl = request.getParameter("VideoURl");
-        String subjectname = request.getParameter("Subjects_SubjectName");
+        String videourl = request.getParameter("VideoURL");
+        String subjectname = request.getParameter("Subjectname");
 
         if (videoname != null) {
             Videos video = em.find(Videos.class, videoname);
-
+            Subjects sub = em.find(Subjects.class, subjectname);
             if (video == null) {
-                Videos addVideo = new Videos();
-                Subjects sub = new Subjects();
+                
+            
+                Videos addVideo = new Videos(videoname, videourl, sub);
+                
 
-                addVideo.setVideoName(videoname);
-                addVideo.setVideoURL(videourl);
-                sub.setSubjectName(subjectname);
-                addVideo.setSubjectsSubjectName(sub);
+//                addVideo.setVideoName(videoname);
+//                addVideo.setVideoURL(videourl);
+//                sub.setSubjectName(subjectname);
+//                addVideo.setSubjectsSubjectName(sub);
 
                 em.getTransaction().begin();
                 em.persist(addVideo);
                 em.getTransaction().commit();
                 request.getRequestDispatcher("Classroom.jsp").forward(request, response);
+                return;
             }
         }
         request.getRequestDispatcher("AddVideo.jsp").forward(request, response);

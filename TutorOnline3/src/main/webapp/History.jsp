@@ -60,25 +60,12 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.jsp">Home</a></li>
+                        <li><a href="index.jsp">Home</a></li>
                         <li><a href="Classroom">Classroom</a></li>
                         <li><a href="Subjects">Subjects</a></li>
                         <li><a href="Contact">Contact</a></li> 
-                        <li><a href="History">History</a></li> 
-                        <li class="nav navbar-nav navbar-right">
-                            <form class="form-inline my-2 my-lg-0" action="Search" method="GET">
-                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Subject" aria-label="Search">
-                                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!--                            <form class="navbar-form">
-                                                                <div class="form-group" style="display:inline;">
-                                                                    <div class="input-group" style="display:table;">
-                                                                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                                                                        <input class="form-control" name="search" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
-                                                                    </div>
-                                                                </div>
-                                                            </form>-->
-                        </li>
+                        <li class="active"><a href="History">History</a></li> 
+                       
                     </ul>
 
 
@@ -90,16 +77,32 @@
         </div>
 
     </nav>
-    <h3>&nbsp;Watched videos&nbsp;</h3>
-    <c:forEach items="${vhu}" var="vhu">
-        <div class="card-body">
-            <h5 class="card-title">${vhu.videosVideoName}</h5>
-        </div>
-<!--        <iframe width="560" height="315" src="https://youtube.com/embed/"
-                frameborder="0"  allowfullscreen>
-        </iframe>-->
-    </c:forEach>
+    <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Watched videos&nbsp;</strong></em></h1>
+    
+    <div class="col-xl-12"><hr></div>
+    <table class="table">
+        <thead>
+            <tr> 
+                    <th scope="col">#</th>
+                    <th scope="col">Video Name</th>
+                    <th scope="col">Username</th>
+              </tr>
+</thead>
+<c:forEach items="${vhu}" var="vhu" begin="1" end="100" varStatus="loop">
+    <tbody>
+        <tr>
+    <th scope="row">${loop.begin + loop.count - 1}</th>
+    <td><a href="VDO?vd=${vhu.videosVideoName.videoName}">${vhu.videosVideoName}</a></td>
+    <td> ${vhu.usersUsername}</td>
+    <tr>
 
+<!--            <h5>${loop.begin + loop.count - 1}</h5>
+ <h5>${vhu.videosVideoName}</h5>
+ <h5> ${vhu.usersUsername}</h5>-->
 
+    <!--        <iframe width="560" height="315" src="https://youtube.com/embed/"
+                    frameborder="0"  allowfullscreen>
+            </iframe>-->
+</c:forEach></tbody></table>
 </body>
 </html>

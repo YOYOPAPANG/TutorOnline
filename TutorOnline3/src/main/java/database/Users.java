@@ -86,6 +86,12 @@ public class Users implements Serializable {
         this.email = email;
     }
 
+    public Users(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+    
+
     public String getUsername() {
         return username;
     }
