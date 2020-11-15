@@ -68,6 +68,10 @@
         <servlet-name>ViewSubjectServlet</servlet-name>
         <servlet-class>servlett.ViewSubjectServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddvideoServlet</servlet-name>
+        <servlet-class>servlett.AddvideoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClassroomServlet</servlet-name>
         <url-pattern>/Classroom</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>ViewSubjectServlet</servlet-name>
         <url-pattern>/ViewSubject</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddvideoServlet</servlet-name>
+        <url-pattern>/Addvideo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

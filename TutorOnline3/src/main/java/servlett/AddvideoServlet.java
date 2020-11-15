@@ -6,6 +6,7 @@
 package servlett;
 
 import database.Subjects;
+import database.Videos;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManager;
@@ -15,13 +16,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author ASUS
  */
-public class ViewSubjectServlet extends HttpServlet {
+public class AddvideoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,13 +36,30 @@ public class ViewSubjectServlet extends HttpServlet {
             throws ServletException, IOException {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_TutorOnline3_war_1.0-SNAPSHOTPU");
         EntityManager em = emf.createEntityManager();
-        String sj = request.getParameter("sj");
-        Subjects subject =em.find(Subjects.class, sj);
-        
-        HttpSession session = request.getSession();
-        
-        Subjects s =(Subjects)session.getAttribute("ss");
-        
+
+        String videoname = request.getParameter("VideoName");
+        String videourl = request.getParameter("VideoURl");
+        String subjectname = request.getParameter("Subjects_SubjectName");
+
+        if (videoname != null) {
+            Videos video = em.find(Videos.class, videoname);
+
+            if (video == null) {
+                Videos addVideo = new Videos();
+                Subjects sub = new Subjects();
+
+                addVideo.setVideoName(videoname);
+                addVideo.setVideoURL(videourl);
+                sub.setSubjectName(subjectname);
+                addVideo.setSubjectsSubjectName(sub);
+
+                em.getTransaction().begin();
+                em.persist(addVideo);
+                em.getTransaction().commit();
+                request.getRequestDispatcher("Classroom.jsp").forward(request, response);
+            }
+        }
+        request.getRequestDispatcher("AddVideo.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

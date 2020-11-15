@@ -10,12 +10,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>History</title>
+        <title>Tutor Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
+
         <style>
             /* Remove the navbar's default margin-bottom and rounded borders */ 
             .navbar {
@@ -95,7 +95,11 @@
         <div class="card-body">
             <h5 class="card-title">${vhu.videosVideoName}</h5>
         </div>
+<!--        <iframe width="560" height="315" src="https://youtube.com/embed/"
+                frameborder="0"  allowfullscreen>
+        </iframe>-->
     </c:forEach>
+
 
 </body>
 </html>

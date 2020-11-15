@@ -32,7 +32,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Classroom</title>
+        <title>Tutor Online</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -72,7 +72,7 @@
     </head>
     <body>
 
-         <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -125,51 +125,44 @@
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
-    <div id="templatemo_main">
-
-        <div id="content" class="float_r">
-            <h1>Videos</h1>
+    <h1>&nbsp;Videos&nbsp;</h1>
+    <h4> <a href="AddVideo.jsp">Add Video</a><br></h4>
+    <div class="container-fluid">
+        <div class="row">
             <c:forEach items="${videos}" var="vd">
-                <div class="product_box" >
-                    <b> ${vd.videoName}</b>
-                    <p>${vd.subjectsSubjectName}</p>
+                
+                <a href="VDO?vd=${vd.videoName}">
+                    <div class="card col-md-4 col-xl-2"> 
+                        <img src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"/> 
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">${vd.videoName}</h5>
+                    <h5 class="card-title">${vd.subjectsSubjectName}</h5>
+                </div><br><br>
+            </div>
+        </c:forEach>
+    </div>              
+    </div><br><br>
 
-                    <a href="VDO?vd=${vd.videoName}">
-
-                        <img src="http://img.youtube.com/vi/${vd.videoURL}/default.jpg"/>
-        <!--                     <iframe width="560" height="315" src="${vd.videoURL}" 
-                             frameborder="0"  allowfullscreen>
-                        </iframe><br>-->
-
-                    </a>
-                </div>        	
-
-
-
-            </c:forEach>
-        </div> 
-        <div class="cleaner"></div>
-    </div>
-
-    <footer class="container-fluid text-center">
-        <p>Online Perfect Learned!!</p>
-        <a target="_blank" href="Contact.jsp" title="ติดต่อเรา"> <h5 class="mt-10">ติดต่อเรา</h5></a>
-        <a id="gotop" href="#" title="Go Top" class="gotop" style="display: inline;"><i class="fa fa-chevron-up"></i><span>กลับด้านบน</span></a>
-    </footer>
-    <!-- <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
-         <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://www.youtube.com/watch?v=KqhW31L3GNo&ab_channel=%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B2%E0%B8%A2;);">
-             
-         </div><button class="ytp-large-play-button ytp-button" aria-label="Play">
-             <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
-             <path class="ytp-large-play-button-bg" 
-                   d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,
-                   .13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,
-                   16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.
-                   64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-             <path d="M 45,24 27,14 27,34" fill="#fff"></path>
-             </svg></button>
-     </div>
-    -->
+<footer class="container-fluid text-center">
+    <p>Online Perfect Learned!!</p>
+    <a target="_blank" href="Contact.jsp" title="ติดต่อเรา"> <h5 class="mt-10">ติดต่อเรา</h5></a>
+    <a id="gotop" href="#" title="Go Top" class="gotop" style="display: inline;"><i class="fa fa-chevron-up"></i><span>กลับด้านบน</span></a>
+</footer>
+<!-- <div class="ytp-cued-thumbnail-overlay" data-layer="4" style="">
+     <div class="ytp-cued-thumbnail-overlay-image" style="background-image: url(&quot;https://www.youtube.com/watch?v=KqhW31L3GNo&ab_channel=%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%A3%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B2%E0%B8%A2;);">
+         
+     </div><button class="ytp-large-play-button ytp-button" aria-label="Play">
+         <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+         <path class="ytp-large-play-button-bg" 
+               d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,
+               .13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,
+               16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.
+               64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+         <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+         </svg></button>
+ </div>
+-->
 </body>
 
 <!--    <body>

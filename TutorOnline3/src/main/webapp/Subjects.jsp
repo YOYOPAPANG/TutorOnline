@@ -25,7 +25,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Subject</title>
+        <title>Tutor Online</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -113,11 +113,14 @@
 
         <h1>&nbsp;Subjects&nbsp;</h1>
         <c:forEach items="${subjects}" var="s">
+            
+            <a href="Subjects?subject=${s.subjectName}">
             <div class="card col-md-4 col-xl-2"> <img class="card-img-top rounded img-fluid" src="subject/${s.subjectName}.jpg " alt="Card image cap" width="250" height="250"> 
                 <div class="card-body">
-                    <a href="Subjects?subject=${s.subjectName}"><h5 class="card-title">${s.subjectName}</h5></a>
-                </div>
+                    <h5 class="card-title">${s.subjectName}</h5>
+                </div><br><br><br>
             </div>
+        </a>
         </c:forEach>
     </body>
 </html>

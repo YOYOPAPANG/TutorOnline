@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Search Subject</title>
+        <title>Tutor Online</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -95,19 +95,22 @@
         </div>
 
     </nav>  
-        <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Search Subject&nbsp;</strong></em></h1>
-        <div class="container-fluid">
-            <div class="row">
-                <c:forEach items="${subjects}" var="s">
+    <h1 class="text-uppercase text-justify"><em><strong>&nbsp;Search Subject&nbsp;</strong></em></h1>
+    <div class="container-fluid">
+        <div class="row">
+            <c:forEach items="${subjects}" var="s">
+                ${s.subjectName}
+                <a href="Subjects?subject=${s.subjectName}">
                     <div class="card col-md-4 col-xl-2"> <img class="card-img-top rounded img-fluid" src="subject/${s.subjectName}.jpg " alt="Card image cap" width="250" height="250"> 
                         <div class="card-body">
                             <h5 class="card-title">${s.subjectName}</h5>
                         </div>
                     </div>
-                </c:forEach>
-            </div>              
+                </a>
+            </c:forEach>
+        </div>              
 
 
-        </div>
-    </body>
+    </div>
+</body>
 </html>

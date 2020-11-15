@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register</title>
+        <title>Tutor Online</title>
         <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
         <link href="bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
